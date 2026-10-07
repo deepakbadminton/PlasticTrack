@@ -2,22 +2,17 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Plastic Usage Survey | PlasticTrack</title>
+    <title>PlasticTrack | Survey</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <nav class="navbar">
 
@@ -26,65 +21,52 @@
         </div>
 
         <div class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="survey.html" class="active">
-                Survey
-            </a>
-
-            <a href="dashboard.html">
-                Dashboard
-            </a>
-
-            <a href="challenge.html">
-                Challenge
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="survey.html">Survey</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="challenge.html">Challenge</a>
         </div>
 
     </nav>
 
 
-
-    <!-- SURVEY HEADER -->
+    <!-- ================= SURVEY HEADER ================= -->
 
     <section class="survey-header">
 
+        <span class="hero-tagline" id="surveyTagline">
+            📋 Plastic Usage Behaviour Survey
+        </span>
+
         <h1 id="surveyTitle">
-            Plastic Usage Behaviour Survey
+            Understand Your Plastic Habits
         </h1>
 
         <p id="surveyDescription">
-
-            Answer these questions based on your usual
-            plastic-use habits.
-
+            Answer the following questions based on your usual
+            everyday habits. There are no right or wrong answers.
         </p>
 
     </section>
 
 
+    <!-- ================= SURVEY ================= -->
 
-    <!-- SURVEY -->
+    <main class="survey-card">
 
-    <section class="survey-container">
-
-        <div class="survey-card">
+        <form id="plasticSurvey">
 
 
             <!-- QUESTION 1 -->
 
             <div class="question">
 
-                <label>
-                    1. How often do you use single-use
-                    plastic water bottles?
+                <label for="waterBottle">
+                    1. How often do you use single-use plastic
+                    water bottles?
                 </label>
 
-                <select id="q1">
+                <select id="waterBottle" required>
 
                     <option value="">
                         Select an option
@@ -109,19 +91,17 @@
                 </select>
 
             </div>
-
 
 
             <!-- QUESTION 2 -->
 
             <div class="question">
 
-                <label>
-                    2. How often do you use plastic
-                    carry bags?
+                <label for="carryBag">
+                    2. How often do you use plastic carry bags?
                 </label>
 
-                <select id="q2">
+                <select id="carryBag" required>
 
                     <option value="">
                         Select an option
@@ -146,19 +126,18 @@
                 </select>
 
             </div>
-
 
 
             <!-- QUESTION 3 -->
 
             <div class="question">
 
-                <label>
-                    3. How often do you use disposable
-                    plastic cups or plates?
+                <label for="disposable">
+                    3. How often do you use disposable plastic
+                    cups or plates?
                 </label>
 
-                <select id="q3">
+                <select id="disposable" required>
 
                     <option value="">
                         Select an option
@@ -183,19 +162,18 @@
                 </select>
 
             </div>
-
 
 
             <!-- QUESTION 4 -->
 
             <div class="question">
 
-                <label>
+                <label for="packaging">
                     4. How often do you buy food or snacks
                     with plastic packaging?
                 </label>
 
-                <select id="q4">
+                <select id="packaging" required>
 
                     <option value="">
                         Select an option
@@ -222,18 +200,16 @@
             </div>
 
 
-
             <!-- QUESTION 5 -->
 
             <div class="question">
 
-                <label>
-                    5. How often do you use reusable
-                    alternatives such as a reusable
-                    bottle or bag?
+                <label for="reusable">
+                    5. How often do you use reusable alternatives
+                    such as a reusable bottle or bag?
                 </label>
 
-                <select id="q5">
+                <select id="reusable" required>
 
                     <option value="">
                         Select an option
@@ -260,348 +236,316 @@
             </div>
 
 
-
-            <!-- SUBMIT BUTTON -->
+            <!-- SUBMIT -->
 
             <button
-                class="primary-btn"
-                onclick="calculateScore()">
+                type="submit"
+                class="primary-btn">
 
                 Calculate My Score →
 
             </button>
 
 
-        </div>
-
-    </section>
+        </form>
 
 
+        <!-- ================= RESULT ================= -->
 
-    <!-- RESULT -->
+        <div
+            class="result-card"
+            id="resultCard"
+            style="display: none;">
 
-    <section
-        class="survey-result"
-        id="result"
-        style="display: none;">
-
-        <div class="result-card">
-
-
-            <h2>
-                Your Plastic Usage Behaviour Score
+            <h2 id="resultTitle">
+                Your Result
             </h2>
-
 
             <div
                 class="big-score"
-                id="score">
-
+                id="scoreDisplay">
                 0
-
             </div>
 
-
-            <h3 id="category">
-                -
-            </h3>
-
+            <p id="scoreCategory"></p>
 
             <p id="scoreExplanation">
+                Your score is based on the frequency
+                of the plastic-use behaviours in this survey.
             </p>
 
+            <p
+                class="suggestion"
+                id="suggestion">
+            </p>
 
-            <div class="suggestions">
-
-                <h3>
-                    💡 Suggestions
-                </h3>
-
-                <p id="suggestionText">
-                </p>
-
-            </div>
-
-
-            <div class="result-note">
-
-                <strong>
-                    How is this score calculated?
-                </strong>
-
-                <p>
-                    The score is based on the frequency of
-                    plastic-use behaviours in these five
-                    questions. A lower score indicates
-                    better plastic-reduction behaviour.
-                </p>
-
-                <p>
-                    Maximum score: 15
-                </p>
-
-            </div>
-
-
-            <!-- NEXT BUTTON -->
+            <br>
 
             <a
-                id="nextButton"
                 href="challenge.html"
-                class="primary-btn">
+                class="primary-btn"
+                id="nextButton">
 
                 Start 7-Day Challenge →
 
             </a>
 
-
         </div>
 
-    </section>
+
+    </main>
 
 
-
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
-            © 2026 PlasticTrack | Track. Reduce. Reuse.
+            © 2026 PlasticTrack
+        </p>
+
+        <p>
+            Track. Reduce. Reuse. 🌱
         </p>
 
     </footer>
 
 
-
-    <!-- JAVASCRIPT -->
+    <!-- ================= JAVASCRIPT ================= -->
 
     <script>
 
-
-        // Check whether this is the
-        // post-challenge survey
+        /* =========================================
+           CHECK SURVEY STAGE
+           ========================================= */
 
         const urlParams =
-            new URLSearchParams(window.location.search);
+            new URLSearchParams(
+                window.location.search
+            );
 
         const isAfterSurvey =
             urlParams.get("stage") === "after";
 
 
+        /* =========================================
+           PAGE ELEMENTS
+           ========================================= */
 
-        // Change page text for
-        // post-challenge survey
+        const surveyTitle =
+            document.getElementById("surveyTitle");
+
+        const surveyDescription =
+            document.getElementById("surveyDescription");
+
+        const surveyTagline =
+            document.getElementById("surveyTagline");
+
+        const nextButton =
+            document.getElementById("nextButton");
+
+
+        /* =========================================
+           CHANGE PAGE FOR AFTER SURVEY
+           ========================================= */
 
         if (isAfterSurvey) {
 
-            document.getElementById("surveyTitle").textContent =
-                "Post-Challenge Survey";
+            surveyTagline.textContent =
+                "📊 Post-Challenge Survey";
 
-            document.getElementById("surveyDescription").textContent =
+            surveyTitle.textContent =
+                "Measure Your Behaviour Change";
+
+            surveyDescription.textContent =
                 "Answer the same questions again to see how your plastic-use behaviour has changed after the 7-day challenge.";
 
+            nextButton.textContent =
+                "View My Dashboard →";
+
+            nextButton.href =
+                "dashboard.html";
+
         }
 
 
+        /* =========================================
+           FORM SUBMISSION
+           ========================================= */
 
-        // Calculate score
+        document
+            .getElementById("plasticSurvey")
+            .addEventListener(
+                "submit",
+                function (event) {
 
-        function calculateScore() {
+                    event.preventDefault();
 
 
-            const q1 =
-                document.getElementById("q1").value;
+                    /* ---------- GET VALUES ---------- */
 
-            const q2 =
-                document.getElementById("q2").value;
+                    const waterBottle =
+                        Number(
+                            document.getElementById(
+                                "waterBottle"
+                            ).value
+                        );
 
-            const q3 =
-                document.getElementById("q3").value;
+                    const carryBag =
+                        Number(
+                            document.getElementById(
+                                "carryBag"
+                            ).value
+                        );
 
-            const q4 =
-                document.getElementById("q4").value;
+                    const disposable =
+                        Number(
+                            document.getElementById(
+                                "disposable"
+                            ).value
+                        );
 
-            const q5 =
-                document.getElementById("q5").value;
+                    const packaging =
+                        Number(
+                            document.getElementById(
+                                "packaging"
+                            ).value
+                        );
 
+                    const reusable =
+                        Number(
+                            document.getElementById(
+                                "reusable"
+                            ).value
+                        );
 
 
-            // Check if all questions
-            // are answered
+                    /* ---------- CALCULATE SCORE ---------- */
 
-            if (
-                q1 === "" ||
-                q2 === "" ||
-                q3 === "" ||
-                q4 === "" ||
-                q5 === ""
-            ) {
+                    const score =
+                        waterBottle +
+                        carryBag +
+                        disposable +
+                        packaging +
+                        reusable;
 
-                alert(
-                    "Please answer all 5 questions."
-                );
 
-                return;
+                    /* ---------- SHOW SCORE ---------- */
 
-            }
+                    document.getElementById(
+                        "scoreDisplay"
+                    ).textContent = score;
 
 
+                    /* ---------- CATEGORY ---------- */
 
-            // Calculate total
+                    let category = "";
+                    let suggestion = "";
 
-            const total =
-                Number(q1) +
-                Number(q2) +
-                Number(q3) +
-                Number(q4) +
-                Number(q5);
 
+                    if (score <= 4) {
 
+                        category =
+                            "🌱 Low Plastic-Use Behaviour";
 
-            // Display score
+                        suggestion =
+                            "Great job! Continue using reusable bottles and bags and avoid unnecessary single-use plastic.";
 
-            document.getElementById("score").textContent =
-                total;
+                    }
 
+                    else if (score <= 8) {
 
+                        category =
+                            "♻️ Moderate Plastic-Use Behaviour";
 
-            // Category variables
+                        suggestion =
+                            "You are on the right track. Try replacing more disposable items with reusable alternatives.";
 
-            let category = "";
+                    }
 
-            let explanation = "";
+                    else {
 
-            let suggestion = "";
+                        category =
+                            "⚠️ High Plastic-Use Behaviour";
 
+                        suggestion =
+                            "Start with small changes such as carrying a reusable bottle or bag and avoiding disposable items.";
 
+                    }
 
-            // Low score
 
-            if (total <= 4) {
+                    document.getElementById(
+                        "scoreCategory"
+                    ).textContent = category;
 
-                category =
-                    "🌱 Low Plastic-Use Behaviour";
 
-                explanation =
-                    "Your current habits show relatively low plastic use. Keep following reusable and sustainable practices.";
+                    document.getElementById(
+                        "suggestion"
+                    ).textContent = suggestion;
 
-                suggestion =
-                    "Continue carrying reusable bottles and bags, and avoid unnecessary single-use plastic.";
 
-            }
+                    /* ---------- EXPLANATION ---------- */
 
+                    document.getElementById(
+                        "scoreExplanation"
+                    ).textContent =
+                        "Your score is based on the frequency of the plastic-use behaviours in this survey. The maximum score is 15. A lower score indicates better plastic-reduction behaviour.";
 
-            // Moderate score
 
-            else if (total <= 8) {
+                    /* =================================
+                       SAVE SCORE
+                       ================================= */
 
-                category =
-                    "⚠️ Moderate Plastic-Use Behaviour";
+                    if (isAfterSurvey) {
 
-                explanation =
-                    "Your habits show some plastic use that can be reduced with small daily changes.";
+                        localStorage.setItem(
+                            "afterScore",
+                            score
+                        );
 
-                suggestion =
-                    "Try replacing disposable items with reusable alternatives and reduce unnecessary plastic packaging.";
+                        localStorage.setItem(
+                            "plasticScore",
+                            score
+                        );
 
-            }
+                    }
 
+                    else {
 
-            // High score
+                        localStorage.setItem(
+                            "beforeScore",
+                            score
+                        );
 
-            else {
+                        localStorage.setItem(
+                            "plasticScore",
+                            score
+                        );
 
-                category =
-                    "🚨 High Plastic-Use Behaviour";
+                    }
 
-                explanation =
-                    "Your responses indicate frequent use of plastic items. There is a good opportunity to reduce unnecessary plastic use.";
 
-                suggestion =
-                    "Start with simple changes such as carrying a reusable bottle and bag and avoiding disposable items.";
+                    /* =================================
+                       SHOW RESULT
+                       ================================= */
 
-            }
+                    document.getElementById(
+                        "resultCard"
+                    ).style.display = "block";
 
 
+                    /* Scroll to result */
 
-            // Display category
+                    document.getElementById(
+                        "resultCard"
+                    ).scrollIntoView({
+                        behavior: "smooth"
+                    });
 
-            document.getElementById("category").textContent =
-                category;
-
-
-
-            // Display explanation
-
-            document.getElementById("scoreExplanation").textContent =
-                explanation;
-
-
-
-            // Display suggestions
-
-            document.getElementById("suggestionText").textContent =
-                suggestion;
-
-
-
-            // Save score
-
-            if (isAfterSurvey) {
-
-                localStorage.setItem(
-                    "afterScore",
-                    total
-                );
-
-                localStorage.setItem(
-                    "plasticScore",
-                    total
-                );
-
-                // Change next button
-
-                document.getElementById("nextButton").textContent =
-                    "View My Dashboard →";
-
-                document.getElementById("nextButton").href =
-                    "dashboard.html";
-
-            }
-
-            else {
-
-                localStorage.setItem(
-                    "beforeScore",
-                    total
-                );
-
-                localStorage.setItem(
-                    "plasticScore",
-                    total
-                );
-
-            }
-
-
-
-            // Show result
-
-            document.getElementById("result").style.display =
-                "block";
-
-
-
-            // Scroll to result
-
-            document.getElementById("result").scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
+                }
+            );
 
     </script>
-
 
 </body>
 
