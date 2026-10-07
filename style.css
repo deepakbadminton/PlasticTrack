@@ -3,17 +3,11 @@
    Clean Community Project Design
    ===================================================== */
 
-
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 :root {
     --green: #17835b;
@@ -21,47 +15,33 @@
     --green-light: #eaf8f1;
     --green-soft: #f4fbf7;
 
-    --blue: #2563eb;
-
     --text: #17342a;
     --text-light: #63736d;
 
     --white: #ffffff;
     --background: #f6faf8;
-
     --border: #dce9e3;
 
-    --shadow:
-        0 10px 30px rgba(23, 58, 45, 0.08);
+    --shadow: 0 10px 30px rgba(23, 58, 45, 0.08);
 
     --radius: 18px;
 }
-
 
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-    font-family:
-        Inter,
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Inter, Arial, Helvetica, sans-serif;
     background: var(--background);
     color: var(--text);
-
     line-height: 1.6;
 }
-
 
 a {
     text-decoration: none;
     color: inherit;
 }
-
 
 button,
 input {
@@ -69,13 +49,12 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    NAVBAR
-========================= */
+   ===================================================== */
 
 .navbar {
     width: 100%;
-
     min-height: 72px;
 
     display: flex;
@@ -84,16 +63,13 @@ input {
 
     padding: 0 6%;
 
-    background: rgba(255, 255, 255, 0.96);
-
+    background: rgba(255, 255, 255, 0.97);
     border-bottom: 1px solid var(--border);
 
     position: sticky;
     top: 0;
-
     z-index: 100;
 }
-
 
 .logo {
     display: flex;
@@ -106,17 +82,14 @@ input {
     color: var(--green-dark);
 }
 
-
 .logo span {
     font-size: 24px;
 }
-
 
 .nav-links {
     display: flex;
     gap: 8px;
 }
-
 
 .nav-links a {
     padding: 9px 15px;
@@ -131,7 +104,6 @@ input {
     transition: 0.2s;
 }
 
-
 .nav-links a:hover,
 .nav-links a.active {
     background: var(--green-light);
@@ -139,13 +111,12 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    BUTTONS
-========================= */
+   ===================================================== */
 
 .btn {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
@@ -166,11 +137,9 @@ input {
         background 0.2s;
 }
 
-
 .btn:hover {
     transform: translateY(-2px);
 }
-
 
 .btn-primary {
     background: var(--green);
@@ -180,11 +149,9 @@ input {
         0 8px 20px rgba(23, 131, 91, 0.2);
 }
 
-
 .btn-primary:hover {
     background: var(--green-dark);
 }
-
 
 .btn-outline {
     background: white;
@@ -193,19 +160,17 @@ input {
     border-color: var(--border);
 }
 
-
 .btn-outline:hover {
     border-color: var(--green);
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+   ===================================================== */
 
 .hero {
     max-width: 1180px;
-
     margin: auto;
 
     min-height: 560px;
@@ -213,27 +178,22 @@ input {
     padding: 80px 30px;
 
     display: grid;
-
-    grid-template-columns:
-        1.1fr 0.9fr;
+    grid-template-columns: 1.1fr 0.9fr;
 
     gap: 60px;
 
     align-items: center;
 }
 
-
 .hero-content {
     max-width: 650px;
 }
-
 
 .eyebrow,
 .section-label {
     display: inline-block;
 
     font-size: 11px;
-
     font-weight: 800;
 
     letter-spacing: 1.5px;
@@ -242,7 +202,6 @@ input {
 
     margin-bottom: 13px;
 }
-
 
 .hero h1 {
     font-size: clamp(42px, 6vw, 68px);
@@ -254,11 +213,9 @@ input {
     margin-bottom: 22px;
 }
 
-
 .hero h1 span {
     color: var(--green);
 }
-
 
 .hero p {
     max-width: 620px;
@@ -272,14 +229,12 @@ input {
     margin-bottom: 30px;
 }
 
-
 .hero-actions {
     display: flex;
     gap: 12px;
 
     flex-wrap: wrap;
 }
-
 
 .hero-note {
     margin-top: 20px;
@@ -289,14 +244,15 @@ input {
     color: var(--text-light);
 }
 
-
 .hero-note span {
     color: var(--green);
     font-weight: bold;
 }
 
 
-/* HERO VISUAL */
+/* =====================================================
+   HERO VISUAL
+   ===================================================== */
 
 .hero-visual {
     min-height: 390px;
@@ -315,11 +271,9 @@ input {
     position: relative;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 }
-
 
 .main-impact {
     width: 300px;
@@ -334,7 +288,6 @@ input {
 
     text-align: center;
 }
-
 
 .impact-icon {
     width: 68px;
@@ -352,7 +305,6 @@ input {
     font-size: 32px;
 }
 
-
 .main-impact span {
     display: block;
 
@@ -362,7 +314,6 @@ input {
 
     margin-bottom: 7px;
 }
-
 
 .main-impact strong {
     display: block;
@@ -374,7 +325,6 @@ input {
     margin-bottom: 12px;
 }
 
-
 .main-impact p {
     color: var(--text-light);
 
@@ -382,7 +332,6 @@ input {
 
     line-height: 1.6;
 }
-
 
 .floating-card {
     position: absolute;
@@ -400,12 +349,10 @@ input {
     font-size: 13px;
 }
 
-
 .floating-one {
     top: 50px;
     left: 25px;
 }
-
 
 .floating-two {
     bottom: 55px;
@@ -413,9 +360,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    QUICK STATS
-========================= */
+   ===================================================== */
 
 .quick-stats {
     max-width: 1050px;
@@ -431,7 +378,6 @@ input {
 
     gap: 18px;
 }
-
 
 .quick-stat {
     background: white;
@@ -450,7 +396,6 @@ input {
     box-shadow: var(--shadow);
 }
 
-
 .stat-icon {
     width: 48px;
     height: 48px;
@@ -465,13 +410,11 @@ input {
     font-size: 22px;
 }
 
-
 .quick-stat strong {
     font-size: 23px;
 
     color: var(--green-dark);
 }
-
 
 .quick-stat p {
     color: var(--text-light);
@@ -480,9 +423,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    COMMON SECTIONS
-========================= */
+   ===================================================== */
 
 .section {
     max-width: 1180px;
@@ -491,7 +434,6 @@ input {
 
     padding: 80px 30px;
 }
-
 
 .soft-section {
     max-width: none;
@@ -502,7 +444,6 @@ input {
     background: #edf8f2;
 }
 
-
 .section-heading {
     max-width: 700px;
 
@@ -510,7 +451,6 @@ input {
 
     text-align: center;
 }
-
 
 .section-heading h2 {
     font-size: 34px;
@@ -520,15 +460,14 @@ input {
     margin-bottom: 12px;
 }
 
-
 .section-heading p {
     color: var(--text-light);
 }
 
 
-/* =========================
+/* =====================================================
    FEATURE CARDS
-========================= */
+   ===================================================== */
 
 .feature-grid {
     display: grid;
@@ -538,7 +477,6 @@ input {
 
     gap: 20px;
 }
-
 
 .feature-card {
     background: white;
@@ -554,22 +492,18 @@ input {
     transition: 0.2s;
 }
 
-
 .feature-card:hover {
     transform: translateY(-4px);
 }
-
 
 .feature-top {
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 
     margin-bottom: 28px;
 }
-
 
 .feature-number {
     color: var(--green);
@@ -579,18 +513,15 @@ input {
     font-size: 13px;
 }
 
-
 .feature-icon {
     font-size: 27px;
 }
-
 
 .feature-card h3 {
     font-size: 22px;
 
     margin-bottom: 10px;
 }
-
 
 .feature-card p {
     color: var(--text-light);
@@ -599,9 +530,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    BENEFITS
-========================= */
+   ===================================================== */
 
 .benefit-grid {
     max-width: 1100px;
@@ -616,7 +547,6 @@ input {
     gap: 18px;
 }
 
-
 .benefit-card {
     background: white;
 
@@ -627,18 +557,15 @@ input {
     padding: 24px;
 }
 
-
 .benefit-card > span {
     font-size: 25px;
 }
-
 
 .benefit-card h3 {
     margin: 14px 0 7px;
 
     font-size: 18px;
 }
-
 
 .benefit-card p {
     color: var(--text-light);
@@ -647,9 +574,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    JOURNEY
-========================= */
+   ===================================================== */
 
 .journey {
     max-width: 1180px;
@@ -671,11 +598,9 @@ input {
     gap: 60px;
 }
 
-
 .journey .section-label {
     color: #9ee3c2;
 }
-
 
 .journey h2 {
     font-size: 38px;
@@ -685,13 +610,11 @@ input {
     margin-bottom: 18px;
 }
 
-
 .journey p {
     color: #d4ebe1;
 
     line-height: 1.7;
 }
-
 
 .journey-steps {
     display: flex;
@@ -703,7 +626,6 @@ input {
     justify-content: center;
 }
 
-
 .journey-step {
     display: flex;
 
@@ -713,11 +635,10 @@ input {
 
     padding: 16px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 
     border-radius: 14px;
 }
-
 
 .journey-step > span {
     width: 38px;
@@ -737,20 +658,142 @@ input {
     font-weight: 800;
 }
 
-
 .journey-step strong {
     display: block;
 }
-
 
 .journey-step p {
     font-size: 12px;
 }
 
 
-/* =========================
+/* =====================================================
+   ABOUT PROJECT
+   ===================================================== */
+
+.about-project {
+    padding-top: 80px;
+}
+
+.about-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.about-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 27px;
+
+    box-shadow: var(--shadow);
+}
+
+.about-card > span {
+    display: block;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.about-card p {
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   SDG SECTION
+   ===================================================== */
+
+.sdg-section {
+    padding: 80px 7%;
+
+    background: #eef8f3;
+}
+
+.sdg-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.sdg-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    display: flex;
+
+    gap: 16px;
+
+    align-items: flex-start;
+}
+
+.sdg-card > strong {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-size: 19px;
+}
+
+.sdg-card h3 {
+    font-size: 16px;
+
+    margin-bottom: 7px;
+}
+
+.sdg-card p {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
    CTA
-========================= */
+   ===================================================== */
 
 .cta {
     max-width: 850px;
@@ -762,20 +805,17 @@ input {
     text-align: center;
 }
 
-
 .cta-icon {
     font-size: 42px;
 
     margin-bottom: 12px;
 }
 
-
 .cta h2 {
     font-size: 36px;
 
     margin-bottom: 12px;
 }
-
 
 .cta p {
     max-width: 600px;
@@ -786,9 +826,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    PAGE HEADER
-========================= */
+   ===================================================== */
 
 .page-header {
     text-align: center;
@@ -803,7 +843,6 @@ input {
         );
 }
 
-
 .page-header h1 {
     font-size: clamp(34px, 5vw, 50px);
 
@@ -811,7 +850,6 @@ input {
 
     margin-bottom: 12px;
 }
-
 
 .page-header p {
     max-width: 650px;
@@ -822,9 +860,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    SURVEY
-========================= */
+   ===================================================== */
 
 .survey-layout {
     max-width: 1180px;
@@ -843,7 +881,6 @@ input {
     align-items: start;
 }
 
-
 .survey-card {
     background: white;
 
@@ -855,7 +892,6 @@ input {
 
     box-shadow: var(--shadow);
 }
-
 
 .survey-card-header {
     display: flex;
@@ -871,11 +907,9 @@ input {
     border-bottom: 1px solid var(--border);
 }
 
-
 .survey-card-header h2 {
     font-size: 25px;
 }
-
 
 .question-counter {
     text-align: center;
@@ -887,7 +921,6 @@ input {
     border-radius: 12px;
 }
 
-
 .question-counter strong {
     display: block;
 
@@ -896,13 +929,11 @@ input {
     font-size: 20px;
 }
 
-
 .question-counter span {
     color: var(--text-light);
 
     font-size: 10px;
 }
-
 
 .question {
     display: grid;
@@ -915,7 +946,6 @@ input {
 
     border-bottom: 1px solid var(--border);
 }
-
 
 .question-number {
     width: 36px;
@@ -935,13 +965,11 @@ input {
     font-weight: 800;
 }
 
-
 .question-body h3 {
     font-size: 17px;
 
     margin-bottom: 16px;
 }
-
 
 .question-body label {
     display: flex;
@@ -967,18 +995,15 @@ input {
     transition: 0.2s;
 }
 
-
 .question-body label:hover {
     border-color: var(--green);
 
     background: var(--green-soft);
 }
 
-
 .question-body input {
     accent-color: var(--green);
 }
-
 
 .submit-btn {
     width: 100%;
@@ -997,7 +1022,6 @@ input {
     gap: 18px;
 }
 
-
 .info-card {
     background: white;
 
@@ -1010,7 +1034,6 @@ input {
     box-shadow: var(--shadow);
 }
 
-
 .info-icon {
     font-size: 27px;
 
@@ -1019,11 +1042,9 @@ input {
     margin-bottom: 12px;
 }
 
-
 .info-card h3 {
     margin-bottom: 8px;
 }
-
 
 .info-card > p {
     color: var(--text-light);
@@ -1032,7 +1053,6 @@ input {
 
     margin-bottom: 17px;
 }
-
 
 .score-level {
     display: flex;
@@ -1050,31 +1070,25 @@ input {
     font-size: 12px;
 }
 
-
 .score-level strong {
     min-width: 35px;
 }
-
 
 .score-level span {
     color: var(--text-light);
 }
 
-
 .score-level.low {
     background: #edf9f2;
 }
-
 
 .score-level.medium {
     background: #f4f7e9;
 }
 
-
 .score-level.high {
     background: #fff2e8;
 }
-
 
 .mini-flow {
     display: flex;
@@ -1093,7 +1107,9 @@ input {
 }
 
 
-/* RESULT */
+/* =====================================================
+   RESULT
+   ===================================================== */
 
 .result-card {
     margin-top: 30px;
@@ -1109,11 +1125,9 @@ input {
     text-align: center;
 }
 
-
 .result-card.hidden {
     display: none;
 }
-
 
 .result-icon {
     font-size: 40px;
@@ -1121,13 +1135,11 @@ input {
     margin-bottom: 10px;
 }
 
-
 .result-card h2 {
     font-size: 21px;
 
     margin-bottom: 8px;
 }
-
 
 .score-display {
     display: flex;
@@ -1141,7 +1153,6 @@ input {
     margin: 10px 0;
 }
 
-
 .score-display strong {
     font-size: 55px;
 
@@ -1150,18 +1161,15 @@ input {
     line-height: 1;
 }
 
-
 .score-display span {
     color: var(--text-light);
 }
-
 
 .result-card h3 {
     color: var(--green-dark);
 
     margin-bottom: 8px;
 }
-
 
 .result-card > p {
     color: var(--text-light);
@@ -1170,7 +1178,6 @@ input {
 
     margin: auto;
 }
-
 
 .suggestion-box {
     margin: 22px auto;
@@ -1186,7 +1193,6 @@ input {
     text-align: left;
 }
 
-
 .suggestion-box p {
     color: var(--text-light);
 
@@ -1196,9 +1202,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    CHALLENGE
-========================= */
+   ===================================================== */
 
 .challenge-progress-card {
     max-width: 950px;
@@ -1216,7 +1222,6 @@ input {
     box-shadow: var(--shadow);
 }
 
-
 .progress-heading {
     display: flex;
 
@@ -1227,18 +1232,15 @@ input {
     margin-bottom: 18px;
 }
 
-
 .progress-heading h2 {
     font-size: 21px;
 }
-
 
 .progress-heading > strong {
     font-size: 28px;
 
     color: var(--green);
 }
-
 
 .progress-track {
     width: 100%;
@@ -1252,7 +1254,6 @@ input {
     overflow: hidden;
 }
 
-
 .progress-track > div {
     width: 0;
 
@@ -1265,7 +1266,6 @@ input {
     transition: width 0.3s ease;
 }
 
-
 .challenge-progress-card p {
     color: var(--text-light);
 
@@ -1273,7 +1273,6 @@ input {
 
     margin-top: 10px;
 }
-
 
 .challenge-grid {
     max-width: 1100px;
@@ -1290,7 +1289,6 @@ input {
     gap: 18px;
 }
 
-
 .challenge-card {
     background: white;
 
@@ -1305,18 +1303,15 @@ input {
     transition: 0.2s;
 }
 
-
 .challenge-card:hover {
     transform: translateY(-3px);
 }
-
 
 .challenge-card.completed {
     border-color: #9bd8bb;
 
     background: #f3fbf6;
 }
-
 
 .challenge-card-top {
     display: flex;
@@ -1328,7 +1323,6 @@ input {
     margin-bottom: 22px;
 }
 
-
 .challenge-card-top span {
     font-size: 11px;
 
@@ -1337,18 +1331,15 @@ input {
     color: var(--green);
 }
 
-
 .challenge-card-top strong {
     font-size: 26px;
 }
-
 
 .challenge-card h2 {
     font-size: 19px;
 
     margin-bottom: 8px;
 }
-
 
 .challenge-card p {
     color: var(--text-light);
@@ -1357,7 +1348,6 @@ input {
 
     min-height: 65px;
 }
-
 
 .challenge-button {
     width: 100%;
@@ -1379,14 +1369,11 @@ input {
     cursor: pointer;
 }
 
-
-.challenge-card.completed
-.challenge-button {
+.challenge-card.completed .challenge-button {
     background: var(--green);
 
     color: white;
 }
-
 
 .completion-card {
     display: none;
@@ -1406,20 +1393,17 @@ input {
     border-radius: 22px;
 }
 
-
 .completion-icon {
     font-size: 42px;
 
     margin-bottom: 10px;
 }
 
-
 .completion-card h2 {
     font-size: 30px;
 
     margin-bottom: 10px;
 }
-
 
 .completion-card p {
     color: var(--text-light);
@@ -1428,9 +1412,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    DASHBOARD
-========================= */
+   ===================================================== */
 
 .dashboard-container {
     max-width: 1100px;
@@ -1439,7 +1423,6 @@ input {
 
     padding: 0 25px 80px;
 }
-
 
 .score-grid {
     display: grid;
@@ -1451,7 +1434,6 @@ input {
 
     margin-bottom: 20px;
 }
-
 
 .dashboard-score-card {
     background: white;
@@ -1465,7 +1447,6 @@ input {
     box-shadow: var(--shadow);
 }
 
-
 .dashboard-score-card.highlight {
     background: var(--green);
 
@@ -1474,7 +1455,6 @@ input {
     border-color: var(--green);
 }
 
-
 .dashboard-icon {
     display: block;
 
@@ -1482,7 +1462,6 @@ input {
 
     margin-bottom: 16px;
 }
-
 
 .card-label {
     display: block;
@@ -1498,11 +1477,9 @@ input {
     margin-bottom: 5px;
 }
 
-
 .highlight .card-label {
     color: #cceee0;
 }
-
 
 .dashboard-score-card strong {
     display: block;
@@ -1514,11 +1491,9 @@ input {
     line-height: 1.1;
 }
 
-
 .highlight strong {
     color: white;
 }
-
 
 .dashboard-score-card p {
     color: var(--text-light);
@@ -1526,11 +1501,9 @@ input {
     font-size: 12px;
 }
 
-
 .highlight p {
     color: #d2ebe0;
 }
-
 
 .status-card {
     display: flex;
@@ -1550,7 +1523,6 @@ input {
     margin-bottom: 22px;
 }
 
-
 .status-icon {
     width: 58px;
     height: 58px;
@@ -1567,18 +1539,15 @@ input {
     font-size: 28px;
 }
 
-
 .status-card h2 {
     margin-bottom: 3px;
 }
-
 
 .status-card p {
     color: var(--text-light);
 
     font-size: 13px;
 }
-
 
 .dashboard-panel {
     background: white;
@@ -1594,7 +1563,6 @@ input {
     box-shadow: var(--shadow);
 }
 
-
 .panel-heading {
     display: flex;
 
@@ -1607,18 +1575,15 @@ input {
     margin-bottom: 20px;
 }
 
-
 .panel-heading h2 {
     font-size: 22px;
 }
-
 
 .panel-heading > strong {
     color: var(--green);
 
     font-size: 25px;
 }
-
 
 .panel-description,
 .panel-note {
@@ -1642,7 +1607,6 @@ input {
     margin-top: 20px;
 }
 
-
 .comparison-row {
     display: grid;
 
@@ -1653,7 +1617,6 @@ input {
     gap: 15px;
 }
 
-
 .comparison-info {
     display: flex;
 
@@ -1662,11 +1625,9 @@ input {
     font-size: 13px;
 }
 
-
 .comparison-info strong {
     color: var(--green-dark);
 }
-
 
 .comparison-track {
     height: 13px;
@@ -1677,7 +1638,6 @@ input {
 
     overflow: hidden;
 }
-
 
 .comparison-track div {
     height: 100%;
@@ -1703,7 +1663,6 @@ input {
     gap: 15px;
 }
 
-
 .tip-card {
     padding: 20px;
 
@@ -1712,18 +1671,15 @@ input {
     border-radius: 14px;
 }
 
-
 .tip-card > span {
     font-size: 25px;
 }
-
 
 .tip-card h3 {
     margin: 10px 0 5px;
 
     font-size: 16px;
 }
-
 
 .tip-card p {
     color: var(--text-light);
@@ -1745,7 +1701,6 @@ input {
     margin-top: 20px;
 }
 
-
 .community-stat {
     text-align: center;
 
@@ -1756,7 +1711,6 @@ input {
     border-radius: 14px;
 }
 
-
 .community-stat span {
     display: block;
 
@@ -1764,7 +1718,6 @@ input {
 
     margin-bottom: 6px;
 }
-
 
 .community-stat strong {
     display: block;
@@ -1774,13 +1727,11 @@ input {
     font-size: 30px;
 }
 
-
 .community-stat p {
     color: var(--text-light);
 
     font-size: 12px;
 }
-
 
 .community-note {
     margin-top: 15px;
@@ -1798,7 +1749,6 @@ input {
     text-align: center;
 }
 
-
 .dashboard-actions {
     display: flex;
 
@@ -1810,9 +1760,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+   ===================================================== */
 
 footer {
     padding: 30px 7%;
@@ -1830,13 +1780,11 @@ footer {
     gap: 20px;
 }
 
-
 footer strong {
     display: block;
 
     font-size: 17px;
 }
-
 
 footer span {
     display: block;
@@ -1846,7 +1794,6 @@ footer span {
     font-size: 11px;
 }
 
-
 footer p {
     color: #b9d3c8;
 
@@ -1854,9 +1801,9 @@ footer p {
 }
 
 
-/* =========================
+/* =====================================================
    RESPONSIVE
-========================= */
+   ===================================================== */
 
 @media (max-width: 900px) {
 
@@ -1866,11 +1813,9 @@ footer p {
         padding-top: 55px;
     }
 
-
     .hero-visual {
         min-height: 320px;
     }
-
 
     .feature-grid,
     .challenge-grid {
@@ -1878,12 +1823,16 @@ footer p {
             repeat(2, 1fr);
     }
 
-
     .benefit-grid {
         grid-template-columns:
             repeat(2, 1fr);
     }
 
+    .about-grid,
+    .sdg-grid {
+        grid-template-columns:
+            1fr;
+    }
 
     .journey {
         grid-template-columns: 1fr;
@@ -1892,11 +1841,9 @@ footer p {
         margin-right: 20px;
     }
 
-
     .survey-layout {
         grid-template-columns: 1fr;
     }
-
 
     .survey-sidebar {
         display: grid;
@@ -1905,12 +1852,10 @@ footer p {
             repeat(2, 1fr);
     }
 
-
     .score-grid {
         grid-template-columns:
             1fr;
     }
-
 }
 
 
@@ -1924,7 +1869,6 @@ footer p {
         gap: 10px;
     }
 
-
     .nav-links {
         width: 100%;
 
@@ -1933,50 +1877,49 @@ footer p {
         flex-wrap: wrap;
     }
 
-
     .nav-links a {
         padding: 7px 10px;
 
         font-size: 12px;
     }
 
-
     .hero {
         padding: 50px 20px;
     }
-
 
     .hero h1 {
         font-size: 43px;
     }
 
-
     .hero p {
         font-size: 14px;
     }
 
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
 
     .hero-visual {
         min-height: 280px;
     }
 
-
     .main-impact {
         width: 240px;
     }
-
 
     .floating-one {
         left: 10px;
         top: 25px;
     }
 
-
     .floating-two {
         right: 10px;
         bottom: 25px;
     }
-
 
     .quick-stats {
         grid-template-columns: 1fr;
@@ -1984,16 +1927,13 @@ footer p {
         margin-top: 0;
     }
 
-
     .section {
         padding: 60px 20px;
     }
 
-
     .section-heading h2 {
         font-size: 28px;
     }
-
 
     .feature-grid,
     .benefit-grid,
@@ -2003,33 +1943,29 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-
     .journey {
         padding: 35px 25px;
 
         margin: 50px 15px;
     }
 
-
     .journey h2 {
         font-size: 30px;
     }
-
 
     .survey-layout {
         padding: 0 15px;
     }
 
-
     .survey-card {
         padding: 20px;
     }
 
-
     .survey-card-header {
         align-items: flex-start;
-    }
 
+        gap: 15px;
+    }
 
     .question {
         grid-template-columns: 1fr;
@@ -2037,44 +1973,41 @@ footer p {
         gap: 10px;
     }
 
-
     .survey-sidebar {
         display: flex;
     }
-
 
     .challenge-progress-card {
         margin-left: 15px;
         margin-right: 15px;
     }
 
-
     .dashboard-container {
         padding-left: 15px;
         padding-right: 15px;
     }
 
+    .dashboard-panel {
+        padding: 20px;
+    }
 
     .status-card {
         align-items: flex-start;
     }
 
-
     .comparison-row {
         grid-template-columns: 1fr;
+
         gap: 7px;
     }
-
 
     .dashboard-actions {
         flex-direction: column;
     }
 
-
     .dashboard-actions .btn {
         width: 100%;
     }
-
 
     footer {
         flex-direction: column;

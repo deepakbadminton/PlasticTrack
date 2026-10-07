@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ==========================================
+    /* =====================================================
        COMMON HELPERS
-    ========================================== */
+    ===================================================== */
 
     function getStoredNumber(key) {
 
@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const number = Number(value);
 
-        return Number.isFinite(number)
-            ? number
-            : null;
+        return Number.isFinite(number) ? number : null;
     }
 
 
@@ -53,10 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-
-    /* ==========================================
+    /* =====================================================
        SURVEY
-    ========================================== */
+    ===================================================== */
 
     const survey =
         document.getElementById("plasticSurvey");
@@ -94,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Measure Your Progress";
 
             description.textContent =
-                "You've completed the challenge. Answer based on your current habits.";
+                "Answer based on your current habits after completing the 7-day challenge.";
 
         }
 
@@ -109,11 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let score = 0;
 
 
-                for (
-                    let i = 1;
-                    i <= 5;
-                    i++
-                ) {
+                for (let i = 1; i <= 5; i++) {
 
                     const answer =
                         document.querySelector(
@@ -123,8 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     if (answer) {
 
-                        score +=
-                            Number(answer.value);
+                        score += Number(answer.value);
 
                     }
 
@@ -140,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (score <= 4) {
 
                     category =
-                        "Low Plastic Usage 🌱";
+                        "Low Plastic Usage";
 
                     icon = "🌱";
 
@@ -155,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 else if (score <= 8) {
 
                     category =
-                        "Moderate Plastic Usage 🌿";
+                        "Moderate Plastic Usage";
 
                     icon = "🌿";
 
@@ -170,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 else {
 
                     category =
-                        "High Plastic Usage 🌍";
+                        "High Plastic Usage";
 
                     icon = "🌍";
 
@@ -178,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         "Your responses show several frequent plastic-use behaviours.";
 
                     suggestion =
-                        "Focus on small daily changes such as carrying a reusable bottle and bag.";
+                        "Focus on small daily changes such as carrying a reusable bottle and reusable bag.";
 
                 }
 
@@ -229,16 +221,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         score
                     );
 
-
                     nextButton.href =
                         "dashboard.html";
 
                     nextButton.textContent =
                         "View My Dashboard →";
 
-                }
-
-                else {
+                } else {
 
                     localStorage.setItem(
                         "beforeScore",
@@ -249,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         "plasticScore",
                         score
                     );
-
 
                     nextButton.href =
                         "challenge.html";
@@ -282,10 +270,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-
-    /* ==========================================
+    /* =====================================================
        CHALLENGE
-    ========================================== */
+    ===================================================== */
 
     const challengeGrid =
         document.querySelector(
@@ -363,9 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                     if (
-                        completedDays.includes(
-                            day
-                        )
+                        completedDays.includes(day)
                     ) {
 
                         card.classList.add(
@@ -375,9 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         button.textContent =
                             "✓ Completed — Click to Undo";
 
-                    }
-
-                    else {
+                    } else {
 
                         card.classList.remove(
                             "completed"
@@ -416,9 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                         if (
-                            completedDays.includes(
-                                day
-                            )
+                            completedDays.includes(day)
                         ) {
 
                             completedDays =
@@ -427,13 +408,9 @@ document.addEventListener("DOMContentLoaded", () => {
                                         item !== day
                                 );
 
-                        }
+                        } else {
 
-                        else {
-
-                            completedDays.push(
-                                day
-                            );
+                            completedDays.push(day);
 
                         }
 
@@ -461,10 +438,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-
-    /* ==========================================
+    /* =====================================================
        DASHBOARD
-    ========================================== */
+    ===================================================== */
 
     const dashboard =
         document.querySelector(
@@ -531,8 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             improvementValue =
                 Math.round(
-                    ((before - after) /
-                    before) * 100
+                    ((before - after) / before) * 100
                 );
 
         }
@@ -544,7 +519,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 : "--";
 
 
-        /* CHALLENGE */
+        /* ==========================================
+           CHALLENGE PROGRESS
+        ========================================== */
 
         const challengeCount =
             document.getElementById(
@@ -568,7 +545,9 @@ document.addEventListener("DOMContentLoaded", () => {
             )}%`;
 
 
-        /* COMPARISON */
+        /* ==========================================
+           BEFORE / AFTER COMPARISON
+        ========================================== */
 
         const beforeBar =
             document.getElementById(
@@ -616,7 +595,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        /* STATUS */
+        /* ==========================================
+           STATUS
+        ========================================== */
 
         const statusIcon =
             document.getElementById(
@@ -642,7 +623,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "🌱";
 
             statusTitle.textContent =
-                "Start with your survey";
+                "Start with your Before Survey";
 
             statusMessage.textContent =
                 "Complete the first survey to understand your current plastic-use behaviour.";
@@ -658,7 +639,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Your journey has started";
 
             statusMessage.textContent =
-                `Your starting score is ${before}/15. Complete the 7-day challenge and take the after survey to measure your progress.`;
+                `Your starting score is ${before}/15. Complete the 7-day challenge and take the After Survey to measure your progress.`;
 
         }
 
@@ -668,10 +649,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 "🎉";
 
             statusTitle.textContent =
-                "Great progress!";
+                "Behavioural improvement recorded";
 
             statusMessage.textContent =
-                `Your Plastic Usage Behaviour Score improved by ${improvementValue}%. Keep following the habits you developed.`;
+                `Your score decreased by ${improvementValue}%. A lower score indicates fewer reported plastic-use behaviours.`;
 
         }
 
@@ -681,7 +662,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "🌿";
 
             statusTitle.textContent =
-                "Keep working on it";
+                "No score change recorded";
 
             statusMessage.textContent =
                 "Your before and after scores are the same. Continue practising small daily changes.";
@@ -694,10 +675,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 "💪";
 
             statusTitle.textContent =
-                "Keep improving";
+                "Keep working on your habits";
 
             statusMessage.textContent =
-                "Your score increased after the challenge. Continue practising reusable and lower-plastic habits.";
+                "Your after score is higher than your starting score. Continue practising reusable and lower-plastic habits.";
 
         }
 
