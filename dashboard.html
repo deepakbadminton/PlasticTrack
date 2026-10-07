@@ -2,22 +2,17 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>PlasticTrack Dashboard</title>
+    <title>PlasticTrack | Dashboard</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <nav class="navbar">
 
@@ -26,64 +21,47 @@
         </div>
 
         <div class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="survey.html">
-                Survey
-            </a>
-
-            <a href="dashboard.html"
-               class="active">
-                Dashboard
-            </a>
-
-            <a href="challenge.html">
-                Challenge
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="survey.html">Survey</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="challenge.html">Challenge</a>
         </div>
 
     </nav>
 
 
+    <!-- ================= DASHBOARD ================= -->
 
-    <!-- DASHBOARD HEADER -->
-
-    <section class="dashboard-header">
-
-        <h1>
-            PlasticTrack Dashboard
-        </h1>
-
-        <p>
-            Track your plastic-use behaviour and see your improvement.
-        </p>
-
-    </section>
+    <main class="dashboard-container">
 
 
+        <!-- HEADER -->
 
-    <!-- SCORE CARDS -->
+        <section class="dashboard-header">
 
-    <section class="dashboard-container">
+            <h1>
+                Your PlasticTrack Dashboard
+            </h1>
 
-        <div class="dashboard-grid">
+            <p>
+                Track your behaviour, complete the challenge and measure your progress.
+            </p>
+
+        </section>
 
 
-            <!-- BEFORE -->
+        <!-- ================= SCORE CARDS ================= -->
 
-            <div class="dashboard-card">
+        <section class="score-grid">
+
+            <div class="score-card">
 
                 <h3>
                     Before Challenge
                 </h3>
 
-                <div class="dashboard-number"
-                     id="beforeScore">
-                    0
+                <div class="score" id="beforeScore">
+                    —
                 </div>
 
                 <p>
@@ -93,18 +71,14 @@
             </div>
 
 
-
-            <!-- AFTER -->
-
-            <div class="dashboard-card">
+            <div class="score-card">
 
                 <h3>
                     After Challenge
                 </h3>
 
-                <div class="dashboard-number"
-                     id="afterScore">
-                    0
+                <div class="score" id="afterScore">
+                    —
                 </div>
 
                 <p>
@@ -114,204 +88,177 @@
             </div>
 
 
-
-            <!-- REDUCTION -->
-
-            <div class="dashboard-card">
+            <div class="score-card">
 
                 <h3>
                     Behaviour Improvement
                 </h3>
 
-                <div class="dashboard-number"
-                     id="reduction">
-                    0%
+                <div class="score" id="improvement">
+                    —
                 </div>
 
                 <p>
-                    Reduction in usage score
+                    Change after the challenge
                 </p>
 
             </div>
 
-        </div>
+        </section>
 
 
+        <!-- ================= PERSONAL PROGRESS ================= -->
 
-        <!-- PERSONAL SUMMARY -->
-
-        <div class="dashboard-section">
+        <section class="dashboard-section">
 
             <h2>
-                🌱 Your Progress
+                🎯 Your Progress
             </h2>
 
             <p id="progressMessage">
-
-                Complete your 7-day challenge and take the
-                post-challenge survey to see your improvement.
-
+                Complete the initial survey to start tracking your progress.
             </p>
 
-        </div>
+        </section>
 
 
+        <!-- ================= 7 DAY CHALLENGE ================= -->
 
-        <!-- 7 DAY CHALLENGE -->
-
-        <div class="dashboard-section">
+        <section class="dashboard-section">
 
             <h2>
-                ♻️ 7-Day Challenge
+                🌱 7-Day Plastic Reduction Challenge
             </h2>
 
-            <p id="challengeCount">
-                0 / 7 days completed
+            <p>
+                Complete simple actions throughout the week to build
+                better plastic-reduction habits.
             </p>
 
-            <div class="progress-bar">
+            <div class="progress-wrapper">
 
-                <div class="progress-fill"
-                     id="challengeProgress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="challengeProgress"></div>
+                </div>
+
+                <div class="progress-text" id="challengeProgressText">
+                    0 / 7 days completed
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
+        <!-- ================= BEFORE VS AFTER ================= -->
 
-        <!-- BEFORE VS AFTER -->
-
-        <div class="dashboard-section">
+        <section class="dashboard-section">
 
             <h2>
                 📊 Before vs After
             </h2>
 
             <p>
-                A lower score indicates lower plastic-use behaviour.
+                A lower score indicates better plastic-reduction behaviour.
             </p>
 
 
-            <div class="comparison-container">
-
-                <div class="comparison-item">
-
-                    <span>
-                        Before
-                    </span>
-
-                    <div class="comparison-bar">
-
-                        <div class="comparison-fill before-fill"
-                             id="beforeBar">
-                        </div>
-
-                    </div>
-
-                    <strong id="beforeBarText">
-                        0
-                    </strong>
-
-                </div>
-
+            <div class="comparison">
 
 
                 <div class="comparison-item">
 
                     <span>
-                        After
+                        Before Challenge
                     </span>
 
                     <div class="comparison-bar">
 
-                        <div class="comparison-fill after-fill"
-                             id="afterBar">
+                        <div
+                            class="comparison-fill"
+                            id="beforeBar">
                         </div>
 
                     </div>
 
-                    <strong id="afterBarText">
-                        0
-                    </strong>
+                </div>
+
+
+                <div class="comparison-item">
+
+                    <span>
+                        After Challenge
+                    </span>
+
+                    <div class="comparison-bar">
+
+                        <div
+                            class="comparison-fill"
+                            id="afterBar">
+                        </div>
+
+                    </div>
 
                 </div>
+
 
             </div>
 
-        </div>
+        </section>
 
 
+        <!-- ================= SCORE EXPLANATION ================= -->
 
-        <!-- WHAT THE SCORE MEANS -->
-
-        <div class="dashboard-section">
+        <section class="dashboard-section">
 
             <h2>
                 💡 Understanding Your Score
             </h2>
 
-            <div class="tips-grid">
+            <p>
+                Your Plastic Usage Behaviour Score is based on the
+                frequency of selected plastic-use behaviours.
+            </p>
 
-                <div class="tip-card">
+            <br>
 
-                    <h3>
-                        0 – 4
-                    </h3>
+            <ul class="tips-list">
 
-                    <p>
-                        Low plastic-use behaviour score.
-                        Keep following sustainable habits.
-                    </p>
+                <li>
+                    A lower score indicates better plastic-reduction behaviour.
+                </li>
 
-                </div>
+                <li>
+                    Using reusable bottles and bags can help reduce
+                    single-use plastic consumption.
+                </li>
 
+                <li>
+                    Avoiding unnecessary plastic packaging can further
+                    improve your everyday habits.
+                </li>
 
-                <div class="tip-card">
+                <li>
+                    Consistent small actions can contribute to long-term
+                    behaviour change.
+                </li>
 
-                    <h3>
-                        5 – 8
-                    </h3>
+            </ul>
 
-                    <p>
-                        Moderate plastic-use behaviour.
-                        There is room for improvement.
-                    </p>
-
-                </div>
-
-
-                <div class="tip-card">
-
-                    <h3>
-                        9 – 15
-                    </h3>
-
-                    <p>
-                        High plastic-use behaviour score.
-                        Try reducing unnecessary single-use plastic.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
+        </section>
 
 
+        <!-- ================= COMMUNITY IMPACT ================= -->
 
-        <!-- COMMUNITY IMPACT -->
-
-        <div class="dashboard-section community-section">
+        <section class="dashboard-section">
 
             <h2>
                 🌍 Community Impact
             </h2>
 
             <p>
-                Real community results will appear here after
-                participant data is collected.
+                Community-level results will be added after real survey
+                responses are collected and analysed.
             </p>
 
 
@@ -320,9 +267,11 @@
 
                 <div class="community-card">
 
-                    <h3 id="participantCount">
+                    <div
+                        class="community-number"
+                        id="participantCount">
                         0
-                    </h3>
+                    </div>
 
                     <p>
                         Participants
@@ -331,12 +280,13 @@
                 </div>
 
 
-
                 <div class="community-card">
 
-                    <h3 id="communityReduction">
+                    <div
+                        class="community-number"
+                        id="communityImprovement">
                         0%
-                    </h3>
+                    </div>
 
                     <p>
                         Average Behaviour Improvement
@@ -345,12 +295,11 @@
                 </div>
 
 
-
                 <div class="community-card">
 
-                    <h3>
+                    <div class="community-number">
                         7
-                    </h3>
+                    </div>
 
                     <p>
                         Challenge Days
@@ -358,173 +307,242 @@
 
                 </div>
 
+
             </div>
 
-        </div>
+        </section>
 
 
-    </section>
+        <!-- ================= ACTION BUTTONS ================= -->
+
+        <section class="dashboard-section">
+
+            <h2>
+                🚀 Continue Your Journey
+            </h2>
+
+            <p>
+                Keep improving your habits or check your challenge progress.
+            </p>
+
+            <br>
+
+            <a href="survey.html" class="primary-btn">
+                Take Survey
+            </a>
+
+            &nbsp;
+
+            <a href="challenge.html" class="secondary-btn">
+                View Challenge
+            </a>
+
+        </section>
 
 
+    </main>
 
-    <!-- FOOTER -->
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
-            © 2026 PlasticTrack | Track. Reduce. Reuse.
+            © 2026 PlasticTrack
+        </p>
+
+        <p>
+            Track. Reduce. Reuse. 🌱
         </p>
 
     </footer>
 
 
-
-    <!-- JAVASCRIPT -->
+    <!-- ================= JAVASCRIPT ================= -->
 
     <script>
 
+        /* =========================================
+           GET SAVED DATA
+           ========================================= */
 
-        // Get saved scores
+        const beforeScore =
+            localStorage.getItem("beforeScore");
 
-        const before =
-            Number(localStorage.getItem("beforeScore")) || 0;
-
-        const after =
-            Number(localStorage.getItem("afterScore")) || 0;
-
-
-        // Get completed challenge days
+        const afterScore =
+            localStorage.getItem("afterScore");
 
         const completedDays =
             Number(localStorage.getItem("completedDays")) || 0;
 
 
+        /* =========================================
+           SCORE ELEMENTS
+           ========================================= */
 
-        // Display scores
+        const beforeScoreElement =
+            document.getElementById("beforeScore");
 
-        document.getElementById("beforeScore").textContent =
-            before;
+        const afterScoreElement =
+            document.getElementById("afterScore");
 
-        document.getElementById("afterScore").textContent =
-            after;
-
-
-
-        // Calculate reduction
-
-        let reduction = 0;
-
-
-        if (before > 0 && after >= 0) {
-
-            reduction =
-                Math.round(
-                    ((before - after) / before) * 100
-                );
-
-        }
-
-
-
-        // Prevent negative display from looking like
-        // a successful reduction
-
-        document.getElementById("reduction").textContent =
-            reduction + "%";
-
-
-
-        // Update challenge progress
-
-        const challengePercentage =
-            (completedDays / 7) * 100;
-
-
-        document.getElementById("challengeCount").textContent =
-            completedDays + " / 7 days completed";
-
-
-        document.getElementById("challengeProgress").style.width =
-            challengePercentage + "%";
-
-
-
-        // Update comparison bars
-
-        const maximumScore = 15;
-
-
-        const beforeWidth =
-            (before / maximumScore) * 100;
-
-
-        const afterWidth =
-            (after / maximumScore) * 100;
-
-
-        document.getElementById("beforeBar").style.width =
-            beforeWidth + "%";
-
-
-        document.getElementById("afterBar").style.width =
-            afterWidth + "%";
-
-
-        document.getElementById("beforeBarText").textContent =
-            before;
-
-
-        document.getElementById("afterBarText").textContent =
-            after;
-
-
-
-        // Progress message
+        const improvementElement =
+            document.getElementById("improvement");
 
         const progressMessage =
             document.getElementById("progressMessage");
 
 
-        if (before === 0) {
+        /* =========================================
+           DISPLAY BEFORE SCORE
+           ========================================= */
 
-            progressMessage.textContent =
-                "Take the initial survey to create your Plastic Usage Behaviour Score.";
+        if (beforeScore !== null) {
 
-        }
-
-        else if (after === 0) {
-
-            progressMessage.textContent =
-                "Your initial score is saved. Complete the 7-day challenge and take the post-challenge survey to measure your improvement.";
+            beforeScoreElement.textContent =
+                beforeScore;
 
         }
 
-        else if (reduction > 0) {
 
-            progressMessage.textContent =
-                "Great work! Your plastic-use behaviour score improved by " +
-                reduction +
-                "%. Keep following sustainable habits.";
+        /* =========================================
+           DISPLAY AFTER SCORE
+           ========================================= */
 
-        }
+        if (afterScore !== null) {
 
-        else if (reduction === 0) {
-
-            progressMessage.textContent =
-                "Your score has not changed yet. Keep working on reducing unnecessary plastic use.";
+            afterScoreElement.textContent =
+                afterScore;
 
         }
 
-        else {
+
+        /* =========================================
+           CALCULATE IMPROVEMENT
+           ========================================= */
+
+        if (
+            beforeScore !== null &&
+            afterScore !== null
+        ) {
+
+            const before =
+                Number(beforeScore);
+
+            const after =
+                Number(afterScore);
+
+            let improvement = 0;
+
+
+            if (before > 0) {
+
+                improvement =
+                    ((before - after) / before) * 100;
+
+            }
+
+
+            improvement =
+                Math.round(improvement);
+
+
+            improvementElement.textContent =
+                improvement + "%";
+
+
+            /* ---------- PROGRESS MESSAGE ---------- */
+
+            if (improvement > 0) {
+
+                progressMessage.textContent =
+                    "Great job! Your plastic-use behaviour score improved by "
+                    + improvement
+                    + "%. Keep following these habits.";
+
+            }
+
+            else if (improvement === 0) {
+
+                progressMessage.textContent =
+                    "Your score has not changed yet. Keep practising the challenge actions.";
+
+            }
+
+            else {
+
+                progressMessage.textContent =
+                    "Your score increased after the challenge. Don't worry — keep practising and try again.";
+
+            }
+
+        }
+
+        else if (beforeScore !== null) {
 
             progressMessage.textContent =
-                "Your plastic-use score increased. Don't worry — use the challenge to build better habits.";
+                "Your initial survey is complete. Finish the 7-day challenge and take the post-challenge survey to measure your change.";
+
+        }
+
+
+        /* =========================================
+           CHALLENGE PROGRESS
+           ========================================= */
+
+        const challengeProgress =
+            document.getElementById("challengeProgress");
+
+        const challengeProgressText =
+            document.getElementById("challengeProgressText");
+
+
+        const challengePercentage =
+            (completedDays / 7) * 100;
+
+
+        challengeProgress.style.width =
+            challengePercentage + "%";
+
+
+        challengeProgressText.textContent =
+            completedDays + " / 7 days completed";
+
+
+        /* =========================================
+           BEFORE / AFTER BARS
+           ========================================= */
+
+        const beforeBar =
+            document.getElementById("beforeBar");
+
+        const afterBar =
+            document.getElementById("afterBar");
+
+
+        if (beforeScore !== null) {
+
+            const before =
+                Number(beforeScore);
+
+            beforeBar.style.width =
+                (before / 15) * 100 + "%";
+
+        }
+
+
+        if (afterScore !== null) {
+
+            const after =
+                Number(afterScore);
+
+            afterBar.style.width =
+                (after / 15) * 100 + "%";
 
         }
 
 
     </script>
-
 
 </body>
 
