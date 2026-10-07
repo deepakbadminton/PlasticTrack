@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Usage Survey | PlasticTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">♻️ PlasticTrack</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="survey.html">Survey</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="challenge.html">Challenge</a>
+        </div>
+    </nav>
+
+    <!-- Survey Section -->
+    <section class="survey-section">
+
+        <div class="survey-header">
+            <h1>Plastic Usage Survey</h1>
+            <p>
+                Answer a few simple questions to understand your daily
+                plastic usage.
+            </p>
+        </div>
+
+        <div class="survey-card">
+
+            <form id="plasticSurvey">
+
+                <!-- Question 1 -->
+                <div class="question">
+                    <label>
+                        1. How often do you use plastic water bottles?
+                    </label>
+
+                    <select id="bottles" required>
+                        <option value="">Select an option</option>
+                        <option value="3">Every day</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Rarely</option>
+                        <option value="0">Never</option>
+                    </select>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <label>
+                        2. How often do you use plastic carry bags?
+                    </label>
+
+                    <select id="bags" required>
+                        <option value="">Select an option</option>
+                        <option value="3">Every day</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Rarely</option>
+                        <option value="0">Never</option>
+                    </select>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <label>
+                        3. How often do you use disposable cups or plates?
+                    </label>
+
+                    <select id="disposable" required>
+                        <option value="">Select an option</option>
+                        <option value="3">Every day</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Rarely</option>
+                        <option value="0">Never</option>
+                    </select>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <label>
+                        4. How often do you buy snacks or food in plastic packaging?
+                    </label>
+
+                    <select id="packaging" required>
+                        <option value="">Select an option</option>
+                        <option value="3">Every day</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Rarely</option>
+                        <option value="0">Never</option>
+                    </select>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <label>
+                        5. Do you carry a reusable bottle or bag?
+                    </label>
+
+                    <select id="reusable" required>
+                        <option value="">Select an option</option>
+                        <option value="0">Always</option>
+                        <option value="1">Sometimes</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Never</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">
+                    Calculate My Score ♻️
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Result -->
+    <section id="resultSection" class="result-section" style="display: none;">
+
+        <div class="result-card">
+
+            <h2>Your Plastic Usage Score</h2>
+
+            <div id="score" class="score">0</div>
+
+            <h3 id="resultTitle"></h3>
+
+            <p id="resultMessage"></p>
+
+            <div class="suggestions">
+                <h3>💡 Suggestions for You</h3>
+
+                <ul>
+                    <li>Carry a reusable water bottle.</li>
+                    <li>Use cloth or reusable bags.</li>
+                    <li>Avoid unnecessary disposable items.</li>
+                    <li>Choose products with less plastic packaging.</li>
+                </ul>
+            </div>
+
+            <a href="challenge.html" class="btn">
+                Start 7-Day Challenge 🚀
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 PlasticTrack | Track. Reduce. Reuse.</p>
+    </footer>
+
+    <script>
+
+        document.getElementById("plasticSurvey").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let bottles = Number(document.getElementById("bottles").value);
+            let bags = Number(document.getElementById("bags").value);
+            let disposable = Number(document.getElementById("disposable").value);
+            let packaging = Number(document.getElementById("packaging").value);
+            let reusable = Number(document.getElementById("reusable").value);
+
+            let totalScore = bottles + bags + disposable + packaging + reusable;
+
+            let resultTitle = "";
+            let resultMessage = "";
+
+            if (totalScore <= 4) {
+                resultTitle = "🌱 Low Plastic Usage";
+                resultMessage = "Great job! You are already making plastic-friendly choices.";
+            }
+            else if (totalScore <= 8) {
+                resultTitle = "🌿 Moderate Plastic Usage";
+                resultMessage = "You're doing well, but there are a few areas where you can reduce plastic use.";
+            }
+            else {
+                resultTitle = "⚠️ High Plastic Usage";
+                resultMessage = "There is a good opportunity to reduce your daily plastic usage.";
+            }
+
+            document.getElementById("score").textContent = totalScore + " / 15";
+            document.getElementById("resultTitle").textContent = resultTitle;
+            document.getElementById("resultMessage").textContent = resultMessage;
+
+            document.getElementById("resultSection").style.display = "block";
+
+            localStorage.setItem("plasticScore", totalScore);
+
+            document.getElementById("resultSection").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
