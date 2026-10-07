@@ -1,8 +1,12 @@
-/* =========================================================
-   PLASTICTRACK - MAIN STYLESHEET
-   ========================================================= */
+/* =====================================================
+   PLASTICTRACK V2
+   Modern Sustainability UI
+===================================================== */
 
-/* ---------- RESET ---------- */
+
+/* =========================
+   RESET
+========================= */
 
 * {
     margin: 0;
@@ -17,245 +21,246 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f8f6;
-    color: #1f2937;
+    color: #14213d;
     line-height: 1.6;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
-button,
-select,
-input {
+button {
     font-family: inherit;
 }
 
+button,
+.primary-btn,
+.secondary-btn {
+    cursor: pointer;
+}
 
-/* =========================================================
+
+/* =========================
    NAVBAR
-   ========================================================= */
+========================= */
 
 .navbar {
-    width: min(1180px, calc(100% - 40px));
-    margin: 18px auto 0;
-    padding: 14px 22px;
+    width: calc(100% - 48px);
+    max-width: 1400px;
+    margin: 22px auto 0;
+    padding: 18px 30px;
 
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dce5df;
+    border-radius: 22px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 30px rgba(20, 50, 35, 0.07);
 
     position: relative;
     z-index: 10;
 }
 
-/* Supports navbar-inner if it exists */
-.navbar-inner {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
 .logo {
-    font-size: 24px;
+    color: #087f3d;
+    font-size: 29px;
     font-weight: 800;
-    color: #15803d;
-    white-space: nowrap;
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
+    gap: 34px;
 }
 
 .nav-links a {
-    padding: 9px 15px;
-    border-radius: 10px;
-
-    font-size: 15px;
-    font-weight: 600;
-    color: #4b5563;
-
-    transition: all 0.2s ease;
+    color: #42536a;
+    font-size: 17px;
+    font-weight: 650;
+    transition: 0.2s;
 }
 
-.nav-links a:hover {
-    background: #ecfdf5;
-    color: #15803d;
+.nav-links a:hover,
+.nav-links a.active {
+    color: #087f3d;
 }
 
 
-/* =========================================================
+/* =========================
    COMMON BUTTONS
-   ========================================================= */
-
-.primary-btn,
-.secondary-btn {
-    display: inline-block;
-
-    padding: 12px 22px;
-    border-radius: 10px;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    cursor: pointer;
-    border: none;
-
-    transition: all 0.2s ease;
-}
+========================= */
 
 .primary-btn {
-    background: #15803d;
+    display: inline-block;
+    background: #087f3d;
     color: white;
+    padding: 14px 23px;
+    border-radius: 11px;
+    font-weight: 700;
+    transition: 0.2s;
+    box-shadow: 0 7px 18px rgba(8, 127, 61, 0.18);
 }
 
 .primary-btn:hover {
-    background: #166534;
+    background: #066b33;
     transform: translateY(-2px);
 }
 
 .secondary-btn {
-    background: #ffffff;
-    color: #15803d;
-    border: 1px solid #bbf7d0;
+    display: inline-block;
+    background: white;
+    color: #087f3d;
+    border: 1.5px solid #087f3d;
+    padding: 13px 22px;
+    border-radius: 11px;
+    font-weight: 700;
+    transition: 0.2s;
 }
 
 .secondary-btn:hover {
-    background: #f0fdf4;
+    background: #eaf7ef;
     transform: translateY(-2px);
 }
 
 
-/* =========================================================
-   HOME PAGE
-   ========================================================= */
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.section {
+    max-width: 1150px;
+    margin: 90px auto;
+    padding: 0 24px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 42px;
+}
+
+.section-heading.left {
+    text-align: left;
+    margin-left: 0;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #087f3d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 9px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #68778b;
+    font-size: 17px;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    width: min(1180px, calc(100% - 40px));
-    margin: 55px auto 30px;
-
-    min-height: 420px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 95px 25px 70px;
+    text-align: center;
 }
 
-.hero-content {
-    flex: 1;
-    max-width: 650px;
-}
-
-.hero-tagline {
+.hero-badge {
     display: inline-block;
-
-    margin-bottom: 15px;
-    padding: 7px 13px;
-
-    background: #dcfce7;
-    color: #166534;
-
-    border-radius: 20px;
-
-    font-size: 13px;
+    background: #e6f6ec;
+    color: #087f3d;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 14px;
     font-weight: 700;
+    margin-bottom: 24px;
 }
 
 .hero h1 {
-    font-size: clamp(40px, 5vw, 64px);
-    line-height: 1.08;
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+}
 
-    color: #111827;
-    margin-bottom: 20px;
+.hero h1 span {
+    color: #087f3d;
 }
 
 .hero p {
-    max-width: 600px;
-
-    font-size: 18px;
-    color: #6b7280;
-
-    margin-bottom: 28px;
+    max-width: 760px;
+    margin: 0 auto 32px;
+    color: #68778b;
+    font-size: 20px;
 }
 
 .hero-buttons {
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 14px;
     flex-wrap: wrap;
 }
 
 
-/* ---------- IMPACT CARD ---------- */
+/* =========================
+   QUICK STATS
+========================= */
 
-.impact-card {
-    width: 330px;
-    flex-shrink: 0;
+.quick-stats {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 
-    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
 
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 22px;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-
+.quick-stat {
+    background: white;
+    border: 1px solid #dce5df;
+    border-radius: 18px;
+    padding: 23px;
     text-align: center;
+    box-shadow: 0 8px 24px rgba(20, 50, 35, 0.04);
 }
 
-.impact-card h2 {
-    color: #15803d;
-    margin-bottom: 10px;
+.quick-stat span {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 5px;
 }
 
-.impact-card p {
-    color: #6b7280;
-    margin-bottom: 22px;
+.quick-stat strong {
+    display: block;
+    font-size: 30px;
+    color: #087f3d;
 }
 
-.impact-card a {
-    display: inline-block;
+.quick-stat p {
+    color: #68778b;
+    font-size: 14px;
 }
 
 
-/* =========================================================
-   FEATURE SECTION
-   ========================================================= */
-
-.features-section {
-    width: min(1180px, calc(100% - 40px));
-    margin: 70px auto;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.section-heading h2 {
-    font-size: 32px;
-    color: #111827;
-    margin-bottom: 8px;
-}
-
-.section-heading p {
-    color: #6b7280;
-}
+/* =========================
+   FEATURE CARDS
+========================= */
 
 .feature-grid {
     display: grid;
@@ -264,540 +269,1065 @@ input {
 }
 
 .feature-card {
-    background: #ffffff;
-    padding: 30px;
-
-    border-radius: 18px;
-    border: 1px solid #e5e7eb;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
-}
-
-.feature-card h3 {
-    margin-bottom: 10px;
-    color: #166534;
-}
-
-.feature-card p {
-    color: #6b7280;
-}
-
-
-/* =========================================================
-   CTA SECTION
-   ========================================================= */
-
-.cta-section {
-    width: min(1180px, calc(100% - 40px));
-    margin: 70px auto;
-}
-
-.cta-card {
-    background: #166534;
-    color: white;
-
-    padding: 45px;
-    border-radius: 22px;
-
-    text-align: center;
-}
-
-.cta-card h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.cta-card p {
-    max-width: 650px;
-    margin: 0 auto 25px;
-
-    color: #dcfce7;
-}
-
-
-/* =========================================================
-   SURVEY PAGE
-   ========================================================= */
-
-.survey-header {
-    width: min(850px, calc(100% - 40px));
-    margin: 55px auto 25px;
-    text-align: center;
-}
-
-.survey-header h1 {
-    font-size: 38px;
-    color: #111827;
-    margin-bottom: 10px;
-}
-
-.survey-header p {
-    color: #6b7280;
-}
-
-.survey-card {
-    width: min(850px, calc(100% - 40px));
-    margin: 0 auto 50px;
-
-    background: #ffffff;
-    padding: 35px;
-
-    border-radius: 20px;
-    border: 1px solid #e5e7eb;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-}
-
-.question {
-    margin-bottom: 25px;
-}
-
-.question label {
-    display: block;
-    font-weight: 700;
-    color: #374151;
-    margin-bottom: 9px;
-}
-
-.question select {
-    width: 100%;
-
-    padding: 12px 14px;
-
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-
     background: white;
-    color: #374151;
-
-    outline: none;
-}
-
-.question select:focus {
-    border-color: #15803d;
-    box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.1);
-}
-
-
-/* ---------- SURVEY RESULT ---------- */
-
-.result-card {
-    margin-top: 30px;
-    padding: 25px;
-
-    background: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-radius: 16px;
-
-    text-align: center;
-}
-
-.big-score {
-    font-size: 54px;
-    font-weight: 800;
-    color: #15803d;
-
-    margin: 10px 0;
-}
-
-.suggestion {
-    margin-top: 15px;
-    color: #4b5563;
-}
-
-
-/* =========================================================
-   DASHBOARD
-   ========================================================= */
-
-.dashboard-container {
-    width: min(1180px, calc(100% - 40px));
-    margin: 55px auto 70px;
-}
-
-.dashboard-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.dashboard-header h1 {
-    font-size: 40px;
-    color: #111827;
-    margin-bottom: 8px;
-}
-
-.dashboard-header p {
-    color: #6b7280;
-}
-
-
-/* ---------- SCORE CARDS ---------- */
-
-.score-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-    margin-bottom: 35px;
-}
-
-.score-card {
-    background: #ffffff;
-
-    padding: 28px;
-
-    border-radius: 18px;
-    border: 1px solid #e5e7eb;
-
-    text-align: center;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-}
-
-.score-card h3 {
-    color: #6b7280;
-    font-size: 15px;
-    margin-bottom: 12px;
-}
-
-.score {
-    font-size: 42px;
-    font-weight: 800;
-    color: #15803d;
-}
-
-
-/* ---------- DASHBOARD SECTIONS ---------- */
-
-.dashboard-section {
-    background: #ffffff;
-
+    border: 1px solid #dce5df;
+    border-radius: 20px;
     padding: 30px;
-
-    margin-bottom: 25px;
-
-    border-radius: 18px;
-    border: 1px solid #e5e7eb;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s;
 }
 
-.dashboard-section h2 {
-    color: #111827;
+.feature-card:hover,
+.benefit-card:hover,
+.challenge-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(20, 50, 35, 0.08);
+}
+
+.feature-icon {
+    font-size: 34px;
     margin-bottom: 18px;
 }
 
-.dashboard-section p {
-    color: #6b7280;
-}
-
-
-/* ---------- PROGRESS ---------- */
-
-.progress-wrapper {
-    margin-top: 20px;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 14px;
-
-    background: #e5e7eb;
-    border-radius: 20px;
-
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 0%;
-
-    background: #15803d;
-
-    border-radius: 20px;
-
-    transition: width 0.4s ease;
-}
-
-.progress-text {
-    margin-top: 10px;
-    font-weight: 700;
-    color: #166534;
-}
-
-
-/* ---------- COMPARISON ---------- */
-
-.comparison {
-    display: grid;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.comparison-item {
-    display: grid;
-    gap: 8px;
-}
-
-.comparison-item span {
-    font-weight: 700;
-    color: #374151;
-}
-
-.comparison-bar {
-    width: 100%;
-    height: 28px;
-
-    background: #e5e7eb;
-
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.comparison-fill {
-    height: 100%;
-    width: 0%;
-
-    background: #15803d;
-
-    border-radius: 8px;
-
-    transition: width 0.5s ease;
-}
-
-
-/* ---------- TIPS ---------- */
-
-.tips-list {
-    padding-left: 20px;
-    color: #4b5563;
-}
-
-.tips-list li {
-    margin-bottom: 10px;
-}
-
-
-/* ---------- COMMUNITY ---------- */
-
-.community-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-    margin-top: 20px;
-}
-
-.community-card {
-    padding: 25px;
-
-    background: #f0fdf4;
-
-    border: 1px solid #bbf7d0;
-    border-radius: 15px;
-
-    text-align: center;
-}
-
-.community-number {
-    font-size: 35px;
+.step-number {
+    position: absolute;
+    top: 22px;
+    right: 23px;
+    color: #b6c2bb;
     font-weight: 800;
-    color: #15803d;
-
-    margin-bottom: 5px;
 }
 
-.community-card p {
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 9px;
+}
+
+.feature-card p {
+    color: #68778b;
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.alternate-section {
+    max-width: none;
+    padding: 85px 24px;
+    background: #eaf5ee;
+}
+
+.benefit-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 26px;
+    border-radius: 18px;
+    border: 1px solid #dce5df;
+    transition: 0.25s;
+}
+
+.benefit-card > div {
+    font-size: 28px;
+    margin-bottom: 13px;
+}
+
+.benefit-card h3 {
+    margin-bottom: 8px;
+}
+
+.benefit-card p {
+    color: #68778b;
+    font-size: 15px;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey-section {
+    max-width: 1150px;
+    margin: 90px auto;
+    padding: 0 24px;
+}
+
+.journey-content {
+    background: #14213d;
+    color: white;
+    border-radius: 28px;
+    padding: 55px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.journey-content h2 {
+    font-size: 46px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.journey-content p {
+    color: #c6d0dc;
+}
+
+.journey-content .section-tag {
+    color: #75d99b;
+}
+
+.journey-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.timeline-item > span {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #087f3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.timeline-item h3 {
+    margin-bottom: 3px;
+}
+
+.timeline-item p {
     font-size: 14px;
 }
 
 
-/* =========================================================
-   CHALLENGE PAGE
-   ========================================================= */
+/* =========================
+   CTA
+========================= */
 
-.challenge-container {
-    width: min(1100px, calc(100% - 40px));
-    margin: 55px auto 70px;
-}
-
-.challenge-header {
+.cta {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 55px 25px;
     text-align: center;
-    margin-bottom: 30px;
+    background: #e3f5e9;
+    border-radius: 25px;
 }
 
-.challenge-header h1 {
-    font-size: 40px;
-    color: #111827;
+.cta-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.cta h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    color: #68778b;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SURVEY HEADER
+========================= */
+
+.survey-header {
+    max-width: 850px;
+    margin: auto;
+    padding: 65px 20px 35px;
+    text-align: center;
+}
+
+.survey-stage {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 50px;
+    background: #e6f6ec;
+    color: #087f3d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.survey-header h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.survey-header p {
+    color: #68778b;
+    font-size: 18px;
+}
+
+
+/* =========================
+   SURVEY LAYOUT
+========================= */
+
+.survey-layout {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 24px 70px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    gap: 25px;
+}
+
+.survey-card {
+    background: white;
+    border: 1px solid #dce5df;
+    border-radius: 23px;
+    padding: 34px;
+    box-shadow: 0 10px 30px rgba(20, 50, 35, 0.05);
+}
+
+.survey-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e7ece9;
+}
+
+.survey-top h2 {
+    font-size: 30px;
+}
+
+.question-count {
+    text-align: center;
+    background: #f0f7f2;
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+
+.question-count strong,
+.question-count span {
+    display: block;
+}
+
+.question-count strong {
+    font-size: 23px;
+    color: #087f3d;
+}
+
+.question-count span {
+    font-size: 11px;
+    color: #68778b;
+}
+
+
+/* =========================
+   QUESTIONS
+========================= */
+
+.question-card {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 15px;
+
+    padding: 25px 0;
+    border-bottom: 1px solid #e7ece9;
+}
+
+.question-number {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #e8f5ed;
+    color: #087f3d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 800;
+}
+
+.question-content h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.question-content label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 14px;
+    margin: 7px 0;
+
+    background: #f8faf9;
+    border: 1px solid #e3e9e5;
+    border-radius: 11px;
+
+    cursor: pointer;
+    transition: 0.18s;
+}
+
+.question-content label:hover {
+    border-color: #087f3d;
+    background: #f0f8f3;
+}
+
+.question-content input {
+    accent-color: #087f3d;
+}
+
+.survey-submit {
+    width: 100%;
+    margin-top: 28px;
+
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+
+    background: #087f3d;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    transition: 0.2s;
+}
+
+.survey-submit:hover {
+    background: #066b33;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SURVEY INFO
+========================= */
+
+.survey-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info-card {
+    background: white;
+    border: 1px solid #dce5df;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.info-icon {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
     margin-bottom: 8px;
 }
 
-.challenge-header p {
-    color: #6b7280;
+.info-card > p {
+    color: #68778b;
+    font-size: 14px;
+}
+
+.score-guide {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.score-guide div {
+    display: grid;
+    grid-template-columns: 12px 45px 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.score-guide small {
+    color: #68778b;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.low {
+    background: #43b96d;
+}
+
+.dot.medium {
+    background: #e7a52d;
+}
+
+.dot.high {
+    background: #df5b5b;
+}
+
+.mini-steps {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 8px;
+}
+
+.mini-steps span {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #087f3d;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.mini-text {
+    font-weight: 700;
 }
 
 
-/* ---------- CHALLENGE PROGRESS ---------- */
+/* =========================
+   RESULT
+========================= */
+
+.result-card {
+    margin-top: 30px;
+    padding: 35px;
+    border-radius: 20px;
+    background: #f1faf4;
+    border: 1px solid #cde7d5;
+    text-align: center;
+}
+
+.result-card.hidden {
+    display: none;
+}
+
+.result-icon {
+    font-size: 50px;
+    margin-bottom: 8px;
+}
+
+.result-card h2 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.score-circle {
+    width: 125px;
+    height: 125px;
+    margin: 15px auto;
+
+    border-radius: 50%;
+    background: white;
+    border: 8px solid #bde2c9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-circle span {
+    font-size: 39px;
+    font-weight: 800;
+    color: #087f3d;
+}
+
+.score-circle small {
+    font-weight: bold;
+    color: #68778b;
+}
+
+.result-card h3 {
+    margin-bottom: 8px;
+}
+
+.result-card > p {
+    color: #68778b;
+}
+
+.suggestion-box {
+    margin: 22px 0;
+    padding: 18px;
+    background: white;
+    border-radius: 13px;
+    text-align: left;
+}
+
+.suggestion-box p {
+    color: #68778b;
+}
+
+.result-button {
+    margin-top: 5px;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-header {
+    max-width: 850px;
+    margin: auto;
+    padding: 65px 20px 35px;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    margin-bottom: 13px;
+}
+
+.dashboard-header p {
+    color: #68778b;
+    font-size: 18px;
+}
+
+.dashboard-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px 24px 70px;
+}
+
+.score-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.score-card {
+    background: white;
+    border: 1px solid #dce5df;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.score-card.highlight-card {
+    background: #eaf7ef;
+    border-color: #cce6d4;
+}
+
+.score-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.score-card > span {
+    display: block;
+    color: #68778b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.score-card strong {
+    display: block;
+    color: #087f3d;
+    font-size: 39px;
+    margin: 5px 0;
+}
+
+.score-card small {
+    color: #68778b;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-card {
+    margin: 22px 0;
+    padding: 25px;
+    border-radius: 20px;
+    background: #14213d;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+
+    background: #087f3d;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+}
+
+.status-card .section-tag {
+    color: #75d99b;
+}
+
+.status-card h2 {
+    margin-bottom: 3px;
+}
+
+.status-card p {
+    color: #c6d0dc;
+}
+
+
+/* =========================
+   DASHBOARD SECTIONS
+========================= */
+
+.dashboard-section,
+.tips-section,
+.community-section {
+    background: white;
+    border: 1px solid #dce5df;
+    border-radius: 21px;
+    padding: 30px;
+    margin: 22px 0;
+}
+
+.section-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-header-row h2 {
+    font-size: 28px;
+}
+
+.section-header-row > strong {
+    color: #087f3d;
+    font-size: 25px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 17px;
+    margin-top: 20px;
+
+    background: #e1e6e3;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+#challengeProgressFill {
+    height: 100%;
+    width: 0;
+    background: #087f3d;
+    border-radius: 30px;
+    transition: width 0.5s ease;
+}
+
+.muted-text {
+    color: #68778b;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   COMPARISON
+========================= */
+
+.comparison {
+    margin-top: 25px;
+}
+
+.comparison-item {
+    margin-bottom: 22px;
+}
+
+.comparison-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comparison-label span {
+    font-weight: 650;
+}
+
+.comparison-label strong {
+    color: #087f3d;
+}
+
+.comparison-bar {
+    width: 100%;
+    height: 20px;
+    background: #e5e9e7;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#beforeBar,
+#afterBar {
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    transition: width 0.6s ease;
+}
+
+#beforeBar {
+    background: #738196;
+}
+
+#afterBar {
+    background: #087f3d;
+}
+
+
+/* =========================
+   TIPS
+========================= */
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tip {
+    display: flex;
+    gap: 13px;
+    padding: 18px;
+    background: #f4f8f6;
+    border-radius: 15px;
+}
+
+.tip > span {
+    font-size: 28px;
+}
+
+.tip h3 {
+    margin-bottom: 4px;
+}
+
+.tip p {
+    color: #68778b;
+    font-size: 14px;
+}
+
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.community-card {
+    padding: 25px;
+    border-radius: 16px;
+    background: #f4f8f6;
+    text-align: center;
+}
+
+.community-card span {
+    display: block;
+    font-size: 27px;
+}
+
+.community-card strong {
+    display: block;
+    font-size: 34px;
+    color: #087f3d;
+}
+
+.community-card p {
+    color: #68778b;
+    font-size: 14px;
+}
+
+.data-note {
+    margin-top: 18px;
+    padding: 13px 16px;
+    border-radius: 11px;
+    background: #fff8e8;
+    color: #755d24;
+    font-size: 13px;
+}
+
+
+/* =========================
+   DASHBOARD ACTIONS
+========================= */
+
+.dashboard-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 35px 0;
+}
+
+
+/* =========================
+   CHALLENGE
+========================= */
+
+.challenge-header {
+    max-width: 900px;
+    margin: auto;
+    padding: 65px 20px 35px;
+    text-align: center;
+}
+
+.challenge-header h1 {
+    font-size: 54px;
+    line-height: 1.05;
+    margin-bottom: 15px;
+}
+
+.challenge-header p {
+    color: #68778b;
+    font-size: 19px;
+}
 
 .challenge-progress {
-    background: #ffffff;
+    max-width: 1100px;
+    margin: 15px auto 35px;
+    padding: 30px;
 
-    padding: 25px;
+    background: white;
+    border: 1px solid #dce5df;
+    border-radius: 22px;
+}
 
-    border-radius: 18px;
-    border: 1px solid #e5e7eb;
+.challenge-progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    margin-bottom: 30px;
+.challenge-progress-top h2 {
+    font-size: 28px;
+}
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+.progress-percent {
+    font-size: 32px;
+    font-weight: 800;
+    color: #087f3d;
 }
 
 .challenge-progress .progress-bar {
-    margin-top: 15px;
+    height: 18px;
+    margin-top: 17px;
+}
+
+#progressFill {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #087f3d;
+    border-radius: 30px;
+    transition: width 0.5s ease;
+}
+
+.progress-hint {
+    margin-top: 9px;
+    color: #68778b;
+    font-size: 14px;
 }
 
 
-/* ---------- CHALLENGE GRID ---------- */
+/* =========================
+   CHALLENGE GRID
+========================= */
 
 .challenge-grid {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px 40px;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 .challenge-card {
-    background: #ffffff;
+    background: white;
+    border: 1px solid #dce5df;
+    border-radius: 21px;
+    padding: 28px;
 
-    padding: 25px;
-
-    border-radius: 18px;
-    border: 1px solid #e5e7eb;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-
-    transition: transform 0.2s ease;
+    transition: 0.25s;
 }
 
-.challenge-card:hover {
-    transform: translateY(-4px);
+.challenge-card.completed {
+    background: #edf9f1;
+    border: 2px solid #58b976;
 }
 
-.challenge-card h3 {
-    color: #166534;
-    margin-bottom: 8px;
+.challenge-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day-number {
+    color: #087f3d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.challenge-icon {
+    font-size: 30px;
+}
+
+.challenge-card h2 {
+    font-size: 25px;
+    margin: 15px 0 8px;
 }
 
 .challenge-card p {
-    color: #6b7280;
-    margin-bottom: 18px;
-}
-
-.challenge-card button {
-    padding: 10px 18px;
-
-    border: none;
-    border-radius: 9px;
-
-    background: #15803d;
-    color: white;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease;
-}
-
-.challenge-card button:hover {
-    background: #166534;
-}
-
-.challenge-card button:disabled {
-    background: #86efac;
-    color: #166534;
-    cursor: default;
-}
-
-
-/* ---------- COMPLETION MESSAGE ---------- */
-
-.completion-message {
-    margin-top: 30px;
-    padding: 30px;
-
-    background: #f0fdf4;
-
-    border: 1px solid #bbf7d0;
-    border-radius: 18px;
-
-    text-align: center;
-}
-
-.completion-message h2 {
-    color: #166534;
-    margin-bottom: 10px;
-}
-
-.completion-message p {
-    color: #4b5563;
+    color: #68778b;
+    min-height: 50px;
     margin-bottom: 20px;
 }
 
+.challenge-card button {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 11px;
+    background: #087f3d;
+    color: white;
+    font-weight: 800;
+    transition: 0.2s;
+}
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+.challenge-card button:hover {
+    background: #066b33;
+}
 
-footer {
-    margin-top: 60px;
-    padding: 30px 20px;
-
-    background: #111827;
-    color: #d1d5db;
-
-    text-align: center;
-
-    font-size: 14px;
+.challenge-final {
+    grid-column: span 2;
 }
 
 
-/* =========================================================
-   RESPONSIVE - TABLET
-   ========================================================= */
+/* =========================
+   COMPLETION
+========================= */
+
+.challenge-complete {
+    display: none;
+    max-width: 850px;
+    margin: 15px auto 70px;
+    padding: 45px 25px;
+
+    background: #e3f5e9;
+    border: 1px solid #c6e5cf;
+    border-radius: 24px;
+
+    text-align: center;
+}
+
+.completion-icon {
+    font-size: 50px;
+    margin-bottom: 8px;
+}
+
+.challenge-complete h2 {
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.challenge-complete p {
+    color: #68778b;
+    margin-bottom: 23px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 80px;
+    padding: 32px 20px;
+    text-align: center;
+
+    background: #14213d;
+    color: white;
+}
+
+footer strong {
+    font-size: 19px;
+}
+
+footer p {
+    color: #c6d0dc;
+    margin-top: 4px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
 
-    .hero {
+    .navbar {
         flex-direction: column;
-        text-align: center;
-        margin-top: 45px;
+        gap: 17px;
     }
 
-    .hero-content {
-        max-width: 750px;
-    }
-
-    .hero p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-buttons {
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
-    .impact-card {
-        width: min(500px, 100%);
+    .feature-grid,
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .feature-grid {
+    .survey-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .survey-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .journey-content {
         grid-template-columns: 1fr;
     }
 
@@ -805,95 +1335,129 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .community-grid {
-        grid-template-columns: 1fr;
+    .challenge-final {
+        grid-column: span 1;
     }
 
-    .challenge-grid {
+    .tips-grid {
         grid-template-columns: 1fr;
     }
 }
 
 
-/* =========================================================
-   RESPONSIVE - MOBILE
-   ========================================================= */
-
 @media (max-width: 650px) {
 
     .navbar {
-        width: calc(100% - 24px);
-        margin-top: 12px;
-
-        padding: 15px;
-
-        flex-direction: column;
-        gap: 12px;
+        width: calc(100% - 20px);
+        margin-top: 10px;
+        padding: 16px;
     }
 
-    .navbar-inner {
-        flex-direction: column;
-        gap: 12px;
+    .logo {
+        font-size: 24px;
     }
 
     .nav-links {
-        width: 100%;
-        gap: 4px;
+        gap: 13px;
     }
 
     .nav-links a {
-        padding: 8px 10px;
         font-size: 14px;
     }
 
     .hero {
-        width: calc(100% - 24px);
-        margin-top: 40px;
+        padding-top: 65px;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 46px;
+        letter-spacing: -2px;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 17px;
     }
 
-    .impact-card {
-        padding: 25px 20px;
+    .quick-stats {
+        grid-template-columns: 1fr;
     }
 
-    .features-section,
-    .cta-section,
-    .dashboard-container,
-    .challenge-container {
-        width: calc(100% - 24px);
-    }
-
-    .survey-header,
-    .survey-card {
-        width: calc(100% - 24px);
-    }
-
-    .survey-card,
-    .dashboard-section {
-        padding: 22px;
-    }
-
-    .dashboard-header h1,
-    .challenge-header h1 {
-        font-size: 32px;
+    .feature-grid,
+    .benefit-grid {
+        grid-template-columns: 1fr;
     }
 
     .section-heading h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
-    .cta-card {
-        padding: 30px 20px;
+    .journey-content {
+        padding: 30px;
     }
 
-    .cta-card h2 {
-        font-size: 27px;
+    .journey-content h2 {
+        font-size: 35px;
+    }
+
+    .survey-header h1,
+    .dashboard-header h1,
+    .challenge-header h1 {
+        font-size: 38px;
+    }
+
+    .survey-card {
+        padding: 20px;
+    }
+
+    .survey-top {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .question-card {
+        grid-template-columns: 1fr;
+    }
+
+    .survey-info {
+        grid-template-columns: 1fr;
+    }
+
+    .status-card {
+        align-items: flex-start;
+    }
+
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-progress {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .challenge-grid {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .challenge-final {
+        grid-column: span 1;
+    }
+
+    .challenge-progress-top {
+        align-items: flex-start;
+    }
+
+    .progress-percent {
+        font-size: 25px;
+    }
+
+    .dashboard-actions {
+        flex-direction: column;
+    }
+
+    .dashboard-actions a {
+        text-align: center;
     }
 }

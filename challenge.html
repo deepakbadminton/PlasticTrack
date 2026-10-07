@@ -1,439 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PlasticTrack | 7-Day Challenge</title>
-
+    <title>7-Day Challenge | PlasticTrack</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="logo">♻️ PlasticTrack</div>
 
-    <nav class="navbar">
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="survey.html">Survey</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="challenge.html">Challenge</a>
+    </div>
+</nav>
 
-        <div class="logo">
-            PlasticTrack
+
+<section class="challenge-header">
+
+    <div class="section-tag">7 DAYS • 7 ACTIONS</div>
+
+    <h1>
+        Reduce Plastic,<br>
+        One Day at a Time. 🌱
+    </h1>
+
+    <p>
+        Complete simple actions that can become sustainable everyday habits.
+    </p>
+
+</section>
+
+
+<section class="challenge-progress">
+
+    <div class="challenge-progress-top">
+
+        <div>
+            <span class="section-tag">YOUR PROGRESS</span>
+            <h2 id="progressText">0 / 7 days completed</h2>
         </div>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="survey.html">Survey</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="challenge.html">Challenge</a>
+        <div class="progress-percent" id="progressPercent">
+            0%
         </div>
 
-    </nav>
+    </div>
 
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
 
-    <!-- ================= CHALLENGE ================= -->
+    <p class="progress-hint">
+        Every completed day is one more step towards better habits.
+    </p>
 
-    <main class="challenge-container">
+</section>
 
 
-        <!-- HEADER -->
+<section class="challenge-grid">
 
-        <section class="challenge-header">
 
-            <span class="hero-tagline">
-                🌱 Small actions. Better habits.
-            </span>
+    <div class="challenge-card" id="day1">
 
-            <h1>
-                7-Day Plastic Reduction Challenge
-            </h1>
+        <div class="challenge-top">
+            <span class="day-number">DAY 01</span>
+            <span class="challenge-icon">💧</span>
+        </div>
 
-            <p>
-                Complete one simple action each day to reduce
-                unnecessary plastic use in your daily life.
-            </p>
-
-        </section>
-
-
-        <!-- ================= PROGRESS ================= -->
-
-        <section class="challenge-progress">
-
-            <h2>
-                📊 Your Challenge Progress
-            </h2>
-
-            <p>
-                Stay consistent and complete all 7 days.
-            </p>
-
-            <div class="progress-wrapper">
-
-                <div class="progress-bar">
-
-                    <div
-                        class="progress-fill"
-                        id="challengeProgress">
-                    </div>
-
-                </div>
-
-                <div
-                    class="progress-text"
-                    id="challengeProgressText">
-                    0 / 7 days completed
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CHALLENGE DAYS ================= -->
-
-        <section class="challenge-grid">
-
-
-            <!-- DAY 1 -->
-
-            <div class="challenge-card">
-
-                <h3>
-                    Day 1 — 💧 Reusable Bottle
-                </h3>
-
-                <p>
-                    Carry and use a reusable water bottle
-                    instead of a single-use plastic bottle.
-                </p>
-
-                <button onclick="completeDay(1)">
-                    Complete Day 1
-                </button>
-
-            </div>
-
-
-            <!-- DAY 2 -->
-
-            <div class="challenge-card">
-
-                <h3>
-                    Day 2 — 🛍️ Skip Plastic Bags
-                </h3>
-
-                <p>
-                    Carry a reusable bag when buying something
-                    instead of accepting a plastic carry bag.
-                </p>
-
-                <button onclick="completeDay(2)">
-                    Complete Day 2
-                </button>
-
-            </div>
-
-
-            <!-- DAY 3 -->
-
-            <div class="challenge-card">
-
-                <h3>
-                    Day 3 — ☕ Avoid Disposable Cups
-                </h3>
-
-                <p>
-                    Avoid disposable plastic cups or plates
-                    and choose reusable alternatives.
-                </p>
-
-                <button onclick="completeDay(3)">
-                    Complete Day 3
-                </button>
-
-            </div>
-
-
-            <!-- DAY 4 -->
-
-            <div class="challenge-card">
-
-                <h3>
-                    Day 4 — 🍱 Reusable Container
-                </h3>
-
-                <p>
-                    Use a reusable container for food instead
-                    of disposable plastic packaging.
-                </p>
-
-                <button onclick="completeDay(4)">
-                    Complete Day 4
-                </button>
-
-            </div>
-
-
-            <!-- DAY 5 -->
-
-            <div class="challenge-card">
-
-                <h3>
-                    Day 5 — 📦 Reduce Packaging
-                </h3>
-
-                <p>
-                    Choose products with less unnecessary
-                    plastic packaging whenever possible.
-                </p>
-
-                <button onclick="completeDay(5)">
-                    Complete Day 5
-                </button>
-
-            </div>
-
-
-            <!-- DAY 6 -->
-
-            <div class="challenge-card">
-
-                <h3>
-                    Day 6 — ♻️ Reuse Something
-                </h3>
-
-                <p>
-                    Find something you would normally throw away
-                    and reuse it for another purpose.
-                </p>
-
-                <button onclick="completeDay(6)">
-                    Complete Day 6
-                </button>
-
-            </div>
-
-
-            <!-- DAY 7 -->
-
-            <div class="challenge-card">
-
-                <h3>
-                    Day 7 — 🌍 Plastic-Free Day
-                </h3>
-
-                <p>
-                    Try to avoid unnecessary single-use plastic
-                    throughout the day.
-                </p>
-
-                <button onclick="completeDay(7)">
-                    Complete Day 7
-                </button>
-
-            </div>
-
-
-        </section>
-
-
-        <!-- ================= COMPLETION MESSAGE ================= -->
-
-        <section
-            class="completion-message"
-            id="completionMessage"
-            style="display: none;">
-
-            <h2>
-                🎉 Challenge Completed!
-            </h2>
-
-            <p>
-                You completed all 7 days of the Plastic Reduction Challenge.
-                Now take the post-challenge survey to measure your behaviour change.
-            </p>
-
-            <a
-                href="survey.html?stage=after"
-                class="primary-btn">
-                Take Post-Challenge Survey →
-            </a>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
+        <h2>Use a Reusable Bottle</h2>
 
         <p>
-            © 2026 PlasticTrack
+            Carry a reusable water bottle instead of buying a single-use
+            plastic bottle.
         </p>
+
+        <button onclick="toggleDay(1)" id="button1">
+            Complete Day 1
+        </button>
+
+    </div>
+
+
+    <div class="challenge-card" id="day2">
+
+        <div class="challenge-top">
+            <span class="day-number">DAY 02</span>
+            <span class="challenge-icon">🛍️</span>
+        </div>
+
+        <h2>Skip Plastic Bags</h2>
 
         <p>
-            Track. Reduce. Reuse. 🌱
+            Carry a reusable bag when shopping instead of taking a
+            plastic carry bag.
         </p>
 
-    </footer>
+        <button onclick="toggleDay(2)" id="button2">
+            Complete Day 2
+        </button>
+
+    </div>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <div class="challenge-card" id="day3">
 
-    <script>
+        <div class="challenge-top">
+            <span class="day-number">DAY 03</span>
+            <span class="challenge-icon">🥤</span>
+        </div>
 
-        /* =========================================
-           GET SAVED COMPLETED DAYS
-           ========================================= */
+        <h2>Avoid Disposable Cups</h2>
 
-        let completedDays =
-            JSON.parse(
-                localStorage.getItem("challengeDays")
-            ) || [];
+        <p>
+            Avoid disposable cups and choose a reusable alternative.
+        </p>
 
+        <button onclick="toggleDay(3)" id="button3">
+            Complete Day 3
+        </button>
 
-        /* =========================================
-           UPDATE PROGRESS
-           ========================================= */
-
-        function updateProgress() {
-
-            /* Remove duplicates and sort days */
-
-            completedDays =
-                [...new Set(completedDays)].sort(
-                    (a, b) => a - b
-                );
+    </div>
 
 
-            /* Save completed days */
+    <div class="challenge-card" id="day4">
 
-            localStorage.setItem(
-                "challengeDays",
-                JSON.stringify(completedDays)
-            );
+        <div class="challenge-top">
+            <span class="day-number">DAY 04</span>
+            <span class="challenge-icon">🍱</span>
+        </div>
 
+        <h2>Carry a Reusable Container</h2>
 
-            localStorage.setItem(
-                "completedDays",
-                completedDays.length
-            );
+        <p>
+            Use a reusable food container instead of disposable plastic
+            packaging.
+        </p>
 
+        <button onclick="toggleDay(4)" id="button4">
+            Complete Day 4
+        </button>
 
-            /* Calculate percentage */
-
-            const percentage =
-                (completedDays.length / 7) * 100;
-
-
-            /* Update progress bar */
-
-            document.getElementById(
-                "challengeProgress"
-            ).style.width =
-                percentage + "%";
+    </div>
 
 
-            /* Update progress text */
+    <div class="challenge-card" id="day5">
 
-            document.getElementById(
-                "challengeProgressText"
-            ).textContent =
-                completedDays.length +
-                " / 7 days completed";
+        <div class="challenge-top">
+            <span class="day-number">DAY 05</span>
+            <span class="challenge-icon">🍎</span>
+        </div>
 
+        <h2>Reduce Plastic Packaging</h2>
 
-            /* Update individual buttons */
+        <p>
+            Choose products with less plastic packaging whenever possible.
+        </p>
 
-            for (let day = 1; day <= 7; day++) {
+        <button onclick="toggleDay(5)" id="button5">
+            Complete Day 5
+        </button>
 
-                const buttons =
-                    document.querySelectorAll(
-                        ".challenge-card button"
-                    );
-
-                const button =
-                    buttons[day - 1];
+    </div>
 
 
-                if (!button) {
-                    continue;
-                }
+    <div class="challenge-card" id="day6">
+
+        <div class="challenge-top">
+            <span class="day-number">DAY 06</span>
+            <span class="challenge-icon">🔄</span>
+        </div>
+
+        <h2>Reuse Something</h2>
+
+        <p>
+            Reuse a plastic item instead of throwing it away after one use.
+        </p>
+
+        <button onclick="toggleDay(6)" id="button6">
+            Complete Day 6
+        </button>
+
+    </div>
 
 
-                if (completedDays.includes(day)) {
+    <div class="challenge-card challenge-final" id="day7">
 
-                    button.textContent =
-                        "✓ Day " + day + " Completed";
+        <div class="challenge-top">
+            <span class="day-number">DAY 07</span>
+            <span class="challenge-icon">🌍</span>
+        </div>
 
-                    button.disabled = true;
+        <h2>Try a Plastic-Free Day</h2>
 
-                }
+        <p>
+            Try to avoid unnecessary single-use plastic for the entire day.
+        </p>
 
-                else {
+        <button onclick="toggleDay(7)" id="button7">
+            Complete Day 7
+        </button>
 
-                    button.textContent =
-                        "Complete Day " + day;
+    </div>
 
-                    button.disabled = false;
-
-                }
-
-            }
-
-
-            /* Show completion message */
-
-            const completionMessage =
-                document.getElementById(
-                    "completionMessage"
-                );
+</section>
 
 
-            if (completedDays.length === 7) {
+<section class="challenge-complete" id="completionMessage">
 
-                completionMessage.style.display =
-                    "block";
+    <div class="completion-icon">🎉</div>
 
-            }
+    <span class="section-tag">CHALLENGE COMPLETE</span>
 
-            else {
+    <h2>You completed all 7 days!</h2>
 
-                completionMessage.style.display =
-                    "none";
+    <p>
+        Great work. Now measure whether your behaviour has changed.
+    </p>
 
-            }
+    <a href="survey.html?stage=after" class="primary-btn">
+        Take After Survey →
+    </a>
 
+</section>
+
+
+<footer>
+    <strong>♻️ PlasticTrack</strong>
+    <p>Track. Reduce. Reuse.</p>
+</footer>
+
+
+<script>
+
+let completedDays =
+    JSON.parse(localStorage.getItem("challengeDays")) || [];
+
+
+completedDays = [...new Set(completedDays)]
+    .map(Number)
+    .sort((a, b) => a - b);
+
+
+function toggleDay(day) {
+
+    if (completedDays.includes(day)) {
+
+        completedDays =
+            completedDays.filter(d => d !== day);
+
+    } else {
+
+        completedDays.push(day);
+
+    }
+
+    completedDays.sort((a, b) => a - b);
+
+    localStorage.setItem(
+        "challengeDays",
+        JSON.stringify(completedDays)
+    );
+
+    updateChallenge();
+}
+
+
+function updateChallenge() {
+
+    for (let day = 1; day <= 7; day++) {
+
+        const card =
+            document.getElementById("day" + day);
+
+        const button =
+            document.getElementById("button" + day);
+
+
+        if (completedDays.includes(day)) {
+
+            card.classList.add("completed");
+
+            button.textContent =
+                "✓ Completed — Click to Undo";
+
+        } else {
+
+            card.classList.remove("completed");
+
+            button.textContent =
+                "Complete Day " + day;
         }
+    }
 
 
-        /* =========================================
-           COMPLETE A DAY
-           ========================================= */
+    const count =
+        completedDays.length;
 
-        function completeDay(day) {
-
-            if (!completedDays.includes(day)) {
-
-                completedDays.push(day);
-
-                updateProgress();
-
-            }
-
-        }
+    const percentage =
+        Math.round((count / 7) * 100);
 
 
-        /* =========================================
-           LOAD SAVED PROGRESS
-           ========================================= */
+    document.getElementById("progressText").textContent =
+        count + " / 7 days completed";
 
-        updateProgress();
+    document.getElementById("progressPercent").textContent =
+        percentage + "%";
 
-    </script>
+    document.getElementById("progressFill").style.width =
+        percentage + "%";
+
+
+    const completionMessage =
+        document.getElementById("completionMessage");
+
+
+    if (count === 7) {
+
+        completionMessage.style.display = "block";
+
+    } else {
+
+        completionMessage.style.display = "none";
+    }
+}
+
+
+updateChallenge();
+
+</script>
 
 </body>
-
 </html>
