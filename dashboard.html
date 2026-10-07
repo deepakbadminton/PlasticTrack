@@ -1,485 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | PlasticTrack</title>
+
+    <title>7-Day Challenge | PlasticTrack</title>
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="logo">♻️ PlasticTrack</div>
+
+    <a href="index.html" class="logo">
+        <span>♻️</span>
+        PlasticTrack
+    </a>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="survey.html">Survey</a>
-        <a class="active" href="dashboard.html">Dashboard</a>
-        <a href="challenge.html">Challenge</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="challenge.html">Challenge</a>
     </div>
+
 </nav>
 
 
-<section class="dashboard-header">
+<section class="page-header">
 
-    <div class="section-tag">PERSONAL DASHBOARD</div>
+    <span class="section-label">
+        7 DAYS • 7 ACTIONS
+    </span>
 
-    <h1>Your PlasticTrack Progress</h1>
+    <h1>
+        Reduce Plastic,<br>
+        One Day at a Time.
+    </h1>
 
     <p>
-        See how your plastic-use behaviour changes over time.
+        Complete simple actions that can become
+        sustainable everyday habits.
     </p>
 
 </section>
 
 
-<main class="dashboard-container">
+<!-- PROGRESS -->
 
+<section class="challenge-progress-card">
 
-    <!-- SCORE CARDS -->
-
-    <section class="score-grid">
-
-        <div class="score-card">
-
-            <div class="score-icon">📋</div>
-
-            <span>BEFORE CHALLENGE</span>
-
-            <strong id="beforeScore">
-                —
-            </strong>
-
-            <small>
-                Starting score
-            </small>
-
-        </div>
-
-
-        <div class="score-card">
-
-            <div class="score-icon">🌱</div>
-
-            <span>AFTER CHALLENGE</span>
-
-            <strong id="afterScore">
-                —
-            </strong>
-
-            <small>
-                Current score
-            </small>
-
-        </div>
-
-
-        <div class="score-card highlight-card">
-
-            <div class="score-icon">📈</div>
-
-            <span>BEHAVIOUR IMPROVEMENT</span>
-
-            <strong id="improvement">
-                —
-            </strong>
-
-            <small>
-                Based on score change
-            </small>
-
-        </div>
-
-    </section>
-
-
-    <!-- STATUS -->
-
-    <section class="status-card">
-
-        <div class="status-icon" id="statusIcon">
-            🌱
-        </div>
+    <div class="progress-heading">
 
         <div>
-            <span class="section-tag">YOUR STATUS</span>
 
-            <h2 id="statusTitle">
-                Start your PlasticTrack journey
+            <span class="section-label">
+                YOUR PROGRESS
+            </span>
+
+            <h2 id="progressText">
+                0 / 7 days completed
             </h2>
 
-            <p id="statusMessage">
-                Take the survey to measure your starting behaviour.
-            </p>
         </div>
 
-    </section>
+        <strong id="progressPercent">
+            0%
+        </strong>
+
+    </div>
+
+    <div class="progress-track">
+        <div id="progressFill"></div>
+    </div>
+
+    <p>
+        Every completed day is one step towards better habits.
+    </p>
+
+</section>
 
 
-    <!-- CHALLENGE PROGRESS -->
+<!-- CHALLENGE CARDS -->
 
-    <section class="dashboard-section">
+<section class="challenge-grid">
 
-        <div class="section-header-row">
 
-            <div>
-                <span class="section-tag">7-DAY CHALLENGE</span>
+    <article class="challenge-card"
+             data-day="1">
 
-                <h2>Your Challenge Progress</h2>
-            </div>
-
-            <strong id="challengeCount">
-                0 / 7
-            </strong>
-
+        <div class="challenge-card-top">
+            <span>DAY 01</span>
+            <strong>💧</strong>
         </div>
 
-        <div class="progress-bar">
-            <div id="challengeProgressFill"></div>
-        </div>
+        <h2>
+            Use a Reusable Bottle
+        </h2>
 
-        <p id="challengeMessage" class="muted-text">
-            Start your challenge and build better habits.
+        <p>
+            Carry a reusable water bottle instead of
+            buying a single-use plastic bottle.
         </p>
 
-    </section>
+        <button class="challenge-button"
+                data-day="1">
+            Complete Day 1
+        </button>
+
+    </article>
 
 
-    <!-- BEFORE AFTER -->
+    <article class="challenge-card"
+             data-day="2">
 
-    <section class="dashboard-section">
-
-        <div class="section-heading left">
-
-            <span class="section-tag">
-                MEASURE YOUR CHANGE
-            </span>
-
-            <h2>Before vs After</h2>
-
-            <p>
-                A lower score indicates fewer reported plastic-use behaviours.
-            </p>
-
+        <div class="challenge-card-top">
+            <span>DAY 02</span>
+            <strong>🛍️</strong>
         </div>
 
+        <h2>
+            Skip Plastic Bags
+        </h2>
 
-        <div class="comparison">
+        <p>
+            Carry a reusable bag when shopping instead
+            of taking a plastic carry bag.
+        </p>
 
-            <div class="comparison-item">
+        <button class="challenge-button"
+                data-day="2">
+            Complete Day 2
+        </button>
 
-                <div class="comparison-label">
-                    <span>Before Challenge</span>
-                    <strong id="beforeLabel">—</strong>
-                </div>
-
-                <div class="comparison-bar">
-                    <div id="beforeBar"></div>
-                </div>
-
-            </div>
+    </article>
 
 
-            <div class="comparison-item">
+    <article class="challenge-card"
+             data-day="3">
 
-                <div class="comparison-label">
-                    <span>After Challenge</span>
-                    <strong id="afterLabel">—</strong>
-                </div>
-
-                <div class="comparison-bar">
-                    <div id="afterBar"></div>
-                </div>
-
-            </div>
-
+        <div class="challenge-card-top">
+            <span>DAY 03</span>
+            <strong>🥤</strong>
         </div>
 
-    </section>
+        <h2>
+            Avoid Disposable Cups
+        </h2>
+
+        <p>
+            Avoid disposable cups and choose a reusable
+            alternative whenever possible.
+        </p>
+
+        <button class="challenge-button"
+                data-day="3">
+            Complete Day 3
+        </button>
+
+    </article>
 
 
-    <!-- TIPS -->
+    <article class="challenge-card"
+             data-day="4">
 
-    <section class="tips-section">
-
-        <div class="section-heading left">
-
-            <span class="section-tag">KEEP IMPROVING</span>
-
-            <h2>Simple habits that matter</h2>
-
+        <div class="challenge-card-top">
+            <span>DAY 04</span>
+            <strong>🍱</strong>
         </div>
 
+        <h2>
+            Carry a Reusable Container
+        </h2>
 
-        <div class="tips-grid">
+        <p>
+            Use a reusable food container instead of
+            disposable plastic packaging.
+        </p>
 
-            <div class="tip">
-                <span>💧</span>
-                <div>
-                    <h3>Carry a bottle</h3>
-                    <p>Reduce dependence on single-use water bottles.</p>
-                </div>
-            </div>
+        <button class="challenge-button"
+                data-day="4">
+            Complete Day 4
+        </button>
 
-            <div class="tip">
-                <span>🛍️</span>
-                <div>
-                    <h3>Carry a reusable bag</h3>
-                    <p>Keep a reusable bag ready for shopping.</p>
-                </div>
-            </div>
+    </article>
 
-            <div class="tip">
-                <span>🍱</span>
-                <div>
-                    <h3>Reuse containers</h3>
-                    <p>Choose reusable containers whenever possible.</p>
-                </div>
-            </div>
 
+    <article class="challenge-card"
+             data-day="5">
+
+        <div class="challenge-card-top">
+            <span>DAY 05</span>
+            <strong>🍎</strong>
         </div>
 
-    </section>
+        <h2>
+            Reduce Plastic Packaging
+        </h2>
+
+        <p>
+            Choose products with less plastic packaging
+            whenever practical.
+        </p>
+
+        <button class="challenge-button"
+                data-day="5">
+            Complete Day 5
+        </button>
+
+    </article>
 
 
-    <!-- COMMUNITY -->
+    <article class="challenge-card"
+             data-day="6">
 
-    <section class="community-section">
-
-        <div class="section-heading left">
-
-            <span class="section-tag">
-                COMMUNITY IMPACT
-            </span>
-
-            <h2>PlasticTrack Community</h2>
-
-            <p>
-                These values will be updated using genuine community
-                survey responses during the project.
-            </p>
-
+        <div class="challenge-card-top">
+            <span>DAY 06</span>
+            <strong>🔄</strong>
         </div>
 
+        <h2>
+            Reuse Something
+        </h2>
 
-        <div class="community-grid">
+        <p>
+            Reuse a suitable plastic item instead of
+            throwing it away after one use.
+        </p>
 
-            <div class="community-card">
-                <span>👥</span>
-                <strong id="participantCount">0</strong>
-                <p>Participants</p>
-            </div>
+        <button class="challenge-button"
+                data-day="6">
+            Complete Day 6
+        </button>
 
-            <div class="community-card">
-                <span>📈</span>
-                <strong id="communityImprovement">0%</strong>
-                <p>Average Behaviour Improvement</p>
-            </div>
+    </article>
 
-            <div class="community-card">
-                <span>🌱</span>
-                <strong>7</strong>
-                <p>Challenge Days</p>
-            </div>
 
+    <article class="challenge-card challenge-final"
+             data-day="7">
+
+        <div class="challenge-card-top">
+            <span>DAY 07</span>
+            <strong>🌍</strong>
         </div>
 
-        <div class="data-note">
-            ℹ️ Community values remain at zero until real participant
-            data is collected and analysed.
-        </div>
+        <h2>
+            Try a Plastic-Free Day
+        </h2>
 
-    </section>
+        <p>
+            Try to avoid unnecessary single-use plastic
+            for the entire day.
+        </p>
+
+        <button class="challenge-button"
+                data-day="7">
+            Complete Day 7
+        </button>
+
+    </article>
+
+</section>
 
 
-    <!-- ACTIONS -->
+<!-- COMPLETION -->
 
-    <section class="dashboard-actions">
+<section class="completion-card"
+         id="completionMessage">
 
-        <a href="survey.html" class="primary-btn">
-            Take Survey
-        </a>
+    <div class="completion-icon">
+        🎉
+    </div>
 
-        <a href="challenge.html" class="secondary-btn">
-            View Challenge
-        </a>
+    <span class="section-label">
+        CHALLENGE COMPLETE
+    </span>
 
-    </section>
+    <h2>
+        You completed all 7 days!
+    </h2>
 
-</main>
+    <p>
+        Great work. Now measure whether your
+        behaviour has changed.
+    </p>
+
+    <a href="survey.html?stage=after"
+       class="btn btn-primary">
+        Take After Survey →
+    </a>
+
+</section>
 
 
 <footer>
-    <strong>♻️ PlasticTrack</strong>
-    <p>Track. Reduce. Reuse.</p>
+
+    <div>
+        <strong>♻️ PlasticTrack</strong>
+        <span>Track. Reduce. Reuse.</span>
+    </div>
+
+    <p>
+        VTU Community Project • Sustainable Living
+    </p>
+
 </footer>
-
-
-<script>
-
-const before =
-    Number(localStorage.getItem("beforeScore"));
-
-const after =
-    Number(localStorage.getItem("afterScore"));
-
-const completedDays =
-    JSON.parse(localStorage.getItem("challengeDays")) || [];
-
-
-const hasBefore =
-    localStorage.getItem("beforeScore") !== null;
-
-const hasAfter =
-    localStorage.getItem("afterScore") !== null;
-
-
-document.getElementById("beforeScore").textContent =
-    hasBefore ? before + " / 15" : "—";
-
-
-document.getElementById("afterScore").textContent =
-    hasAfter ? after + " / 15" : "—";
-
-
-document.getElementById("beforeLabel").textContent =
-    hasBefore ? before + " / 15" : "—";
-
-
-document.getElementById("afterLabel").textContent =
-    hasAfter ? after + " / 15" : "—";
-
-
-if (hasBefore) {
-
-    document.getElementById("beforeBar").style.width =
-        ((before / 15) * 100) + "%";
-}
-
-
-if (hasAfter) {
-
-    document.getElementById("afterBar").style.width =
-        ((after / 15) * 100) + "%";
-}
-
-
-let improvement = 0;
-
-
-if (hasBefore && hasAfter && before > 0) {
-
-    improvement =
-        Math.round(((before - after) / before) * 100);
-
-}
-
-
-if (hasBefore && hasAfter) {
-
-    document.getElementById("improvement").textContent =
-        improvement + "%";
-
-} else {
-
-    document.getElementById("improvement").textContent =
-        "—";
-}
-
-
-const challengeCount =
-    completedDays.length;
-
-const challengePercent =
-    Math.round((challengeCount / 7) * 100);
-
-
-document.getElementById("challengeCount").textContent =
-    challengeCount + " / 7";
-
-
-document.getElementById("challengeProgressFill").style.width =
-    challengePercent + "%";
-
-
-if (challengeCount === 7) {
-
-    document.getElementById("challengeMessage").textContent =
-        "🎉 Challenge complete! Take your after survey.";
-
-} else if (challengeCount > 0) {
-
-    document.getElementById("challengeMessage").textContent =
-        "Keep going! You have completed " +
-        challengeCount +
-        " of 7 days.";
-
-}
-
-
-const statusTitle =
-    document.getElementById("statusTitle");
-
-const statusMessage =
-    document.getElementById("statusMessage");
-
-const statusIcon =
-    document.getElementById("statusIcon");
-
-
-if (!hasBefore) {
-
-    statusIcon.textContent = "📋";
-
-    statusTitle.textContent =
-        "Start your PlasticTrack journey";
-
-    statusMessage.textContent =
-        "Take the survey to measure your starting behaviour.";
-
-} else if (!hasAfter) {
-
-    statusIcon.textContent = "🌱";
-
-    statusTitle.textContent =
-        "Your challenge is in progress";
-
-    statusMessage.textContent =
-        "Complete the 7-day challenge and take the after survey.";
-
-} else if (improvement > 0) {
-
-    statusIcon.textContent = "🎉";
-
-    statusTitle.textContent =
-        "Your behaviour has improved!";
-
-    statusMessage.textContent =
-        "Your reported plastic-use behaviour score has decreased.";
-
-} else if (improvement === 0) {
-
-    statusIcon.textContent = "🔄";
-
-    statusTitle.textContent =
-        "Keep working on your habits";
-
-    statusMessage.textContent =
-        "Your before and after scores are currently the same.";
-
-} else {
-
-    statusIcon.textContent = "💪";
-
-    statusTitle.textContent =
-        "There is room for improvement";
-
-    statusMessage.textContent =
-        "Try the challenge again and focus on small daily changes.";
-}
-
-</script>
 
 </body>
 </html>

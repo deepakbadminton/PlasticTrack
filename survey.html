@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plastic Usage Survey | PlasticTrack</title>
+
+    <title>Survey | PlasticTrack</title>
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="logo">♻️ PlasticTrack</div>
+
+    <a href="index.html" class="logo">
+        <span>♻️</span>
+        PlasticTrack
+    </a>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
@@ -18,21 +26,22 @@
         <a href="dashboard.html">Dashboard</a>
         <a href="challenge.html">Challenge</a>
     </div>
+
 </nav>
 
 
-<section class="survey-header">
+<section class="page-header">
 
-    <div class="survey-stage" id="stageBadge">
+    <span class="section-label" id="stageBadge">
         BEFORE CHALLENGE
-    </div>
+    </span>
 
     <h1 id="surveyTitle">
         Understand Your Plastic Habits
     </h1>
 
     <p id="surveyDescription">
-        Answer honestly based on your usual habits.
+        Answer honestly based on your usual everyday habits.
         There are no right or wrong answers.
     </p>
 
@@ -41,17 +50,22 @@
 
 <div class="survey-layout">
 
-    <!-- MAIN SURVEY -->
+
     <main class="survey-card">
 
-        <div class="survey-top">
+        <div class="survey-card-header">
 
             <div>
-                <span class="section-tag">PLASTIC BEHAVIOUR</span>
-                <h2>Quick Survey</h2>
+                <span class="section-label">
+                    PLASTIC BEHAVIOUR
+                </span>
+
+                <h2>
+                    Quick Survey
+                </h2>
             </div>
 
-            <div class="question-count">
+            <div class="question-counter">
                 <strong>5</strong>
                 <span>Questions</span>
             </div>
@@ -63,14 +77,18 @@
 
 
             <!-- QUESTION 1 -->
-            <div class="question-card">
 
-                <div class="question-number">01</div>
+            <div class="question">
 
-                <div class="question-content">
+                <div class="question-number">
+                    01
+                </div>
+
+                <div class="question-body">
 
                     <h3>
-                        How often do you use single-use plastic water bottles?
+                        How often do you use single-use
+                        plastic water bottles?
                     </h3>
 
                     <label>
@@ -99,14 +117,18 @@
 
 
             <!-- QUESTION 2 -->
-            <div class="question-card">
 
-                <div class="question-number">02</div>
+            <div class="question">
 
-                <div class="question-content">
+                <div class="question-number">
+                    02
+                </div>
+
+                <div class="question-body">
 
                     <h3>
-                        How often do you use plastic carry bags?
+                        How often do you use plastic
+                        carry bags?
                     </h3>
 
                     <label>
@@ -135,14 +157,18 @@
 
 
             <!-- QUESTION 3 -->
-            <div class="question-card">
 
-                <div class="question-number">03</div>
+            <div class="question">
 
-                <div class="question-content">
+                <div class="question-number">
+                    03
+                </div>
+
+                <div class="question-body">
 
                     <h3>
-                        How often do you use disposable plastic cups or plates?
+                        How often do you use disposable
+                        plastic cups or plates?
                     </h3>
 
                     <label>
@@ -171,14 +197,18 @@
 
 
             <!-- QUESTION 4 -->
-            <div class="question-card">
 
-                <div class="question-number">04</div>
+            <div class="question">
 
-                <div class="question-content">
+                <div class="question-number">
+                    04
+                </div>
+
+                <div class="question-body">
 
                     <h3>
-                        How often do you buy food or snacks with plastic packaging?
+                        How often do you buy food or snacks
+                        with plastic packaging?
                     </h3>
 
                     <label>
@@ -207,15 +237,18 @@
 
 
             <!-- QUESTION 5 -->
-            <div class="question-card">
 
-                <div class="question-number">05</div>
+            <div class="question">
 
-                <div class="question-content">
+                <div class="question-number">
+                    05
+                </div>
+
+                <div class="question-body">
 
                     <h3>
-                        How often do you use reusable alternatives such as
-                        a reusable bottle or bag?
+                        How often do you use reusable alternatives
+                        such as a reusable bottle or bag?
                     </h3>
 
                     <label>
@@ -243,7 +276,7 @@
             </div>
 
 
-            <button type="submit" class="survey-submit">
+            <button type="submit" class="btn btn-primary submit-btn">
                 Calculate My Score →
             </button>
 
@@ -251,92 +284,112 @@
 
 
         <!-- RESULT -->
+
         <div id="result" class="result-card hidden">
 
-            <div class="result-icon" id="resultIcon">🌱</div>
-
-            <span class="section-tag">YOUR RESULT</span>
-
-            <h2 id="scoreText"></h2>
-
-            <div class="score-circle">
-                <span id="scoreNumber">0</span>
-                <small>/ 15</small>
+            <div class="result-icon" id="resultIcon">
+                🌱
             </div>
 
-            <h3 id="categoryText"></h3>
+            <span class="section-label">
+                YOUR RESULT
+            </span>
+
+            <h2 id="scoreText">
+                Your Starting Score
+            </h2>
+
+            <div class="score-display">
+                <strong id="scoreNumber">0</strong>
+                <span>/15</span>
+            </div>
+
+            <h3 id="categoryText">
+                Low Plastic Usage
+            </h3>
 
             <p id="explanationText"></p>
 
             <div class="suggestion-box">
-                <h3>💡 Suggested Actions</h3>
+
+                <strong>
+                    💡 Suggested Action
+                </strong>
+
                 <p id="suggestionText"></p>
+
             </div>
 
-            <a id="nextButton" class="primary-btn result-button"></a>
+            <a href="challenge.html"
+               id="nextButton"
+               class="btn btn-primary">
+                Start 7-Day Challenge →
+            </a>
 
         </div>
 
     </main>
 
 
-    <!-- SIDE INFO -->
-    <aside class="survey-info">
+    <!-- INFORMATION -->
+
+    <aside class="survey-sidebar">
 
         <div class="info-card">
 
-            <span class="info-icon">📊</span>
+            <div class="info-icon">
+                📊
+            </div>
 
-            <h3>How the score works</h3>
+            <h3>
+                How the score works
+            </h3>
 
             <p>
-                Each answer receives a value based on the frequency
-                of the behaviour.
+                Each response receives a value based on
+                the frequency of the reported behaviour.
             </p>
 
-            <div class="score-guide">
-                <div>
-                    <span class="dot low"></span>
-                    <strong>0–4</strong>
-                    <small>Low usage</small>
-                </div>
+            <div class="score-level low">
+                <strong>0–4</strong>
+                <span>Low usage</span>
+            </div>
 
-                <div>
-                    <span class="dot medium"></span>
-                    <strong>5–8</strong>
-                    <small>Moderate usage</small>
-                </div>
+            <div class="score-level medium">
+                <strong>5–8</strong>
+                <span>Moderate usage</span>
+            </div>
 
-                <div>
-                    <span class="dot high"></span>
-                    <strong>9–15</strong>
-                    <small>High usage</small>
-                </div>
+            <div class="score-level high">
+                <strong>9–15</strong>
+                <span>High usage</span>
             </div>
 
         </div>
 
 
-        <div class="info-card challenge-preview">
+        <div class="info-card">
 
-            <span class="info-icon">🌱</span>
-
-            <h3>What's next?</h3>
-
-            <p>
-                After your first survey, PlasticTrack gives you a
-                simple 7-day challenge to practise lower-plastic habits.
-            </p>
-
-            <div class="mini-steps">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
+            <div class="info-icon">
+                🌱
             </div>
 
-            <p class="mini-text">
-                Survey → Challenge → Measure
+            <h3>
+                What happens next?
+            </h3>
+
+            <p>
+                Complete a 7-day challenge with simple
+                plastic-reduction actions.
             </p>
+
+            <div class="mini-flow">
+                <span>Survey</span>
+                <b>→</b>
+                <span>Challenge</span>
+                <b>→</b>
+                <span>Measure</span>
+            </div>
 
         </div>
 
@@ -346,151 +399,17 @@
 
 
 <footer>
-    <strong>♻️ PlasticTrack</strong>
-    <p>Track. Reduce. Reuse.</p>
+
+    <div>
+        <strong>♻️ PlasticTrack</strong>
+        <span>Track. Reduce. Reuse.</span>
+    </div>
+
+    <p>
+        VTU Community Project • Sustainable Living
+    </p>
+
 </footer>
-
-
-<script>
-
-const urlParams = new URLSearchParams(window.location.search);
-const isAfter = urlParams.get("stage") === "after";
-
-const form = document.getElementById("plasticSurvey");
-const result = document.getElementById("result");
-
-const stageBadge = document.getElementById("stageBadge");
-const surveyTitle = document.getElementById("surveyTitle");
-const surveyDescription = document.getElementById("surveyDescription");
-const nextButton = document.getElementById("nextButton");
-
-
-if (isAfter) {
-
-    stageBadge.textContent = "AFTER CHALLENGE";
-
-    surveyTitle.textContent =
-        "Measure Your Progress";
-
-    surveyDescription.textContent =
-        "You've completed the challenge. Answer based on your current habits.";
-
-}
-
-
-form.addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    let score = 0;
-
-    for (let i = 1; i <= 5; i++) {
-
-        const answer =
-            document.querySelector(
-                'input[name="q' + i + '"]:checked'
-            );
-
-        if (answer) {
-            score += Number(answer.value);
-        }
-
-    }
-
-
-    let category = "";
-    let explanation = "";
-    let suggestion = "";
-    let icon = "";
-
-    if (score <= 4) {
-
-        category = "Low Plastic Usage 🌱";
-        icon = "🌱";
-
-        explanation =
-            "Your responses show relatively low plastic-use behaviour.";
-
-        suggestion =
-            "Keep your current habits and encourage others to use reusable alternatives.";
-
-    } else if (score <= 8) {
-
-        category = "Moderate Plastic Usage 🌿";
-        icon = "🌿";
-
-        explanation =
-            "Your responses show some regular plastic-use habits that can be reduced.";
-
-        suggestion =
-            "Try replacing plastic bags, bottles and disposable items with reusable alternatives.";
-
-    } else {
-
-        category = "High Plastic Usage 🌍";
-        icon = "🌍";
-
-        explanation =
-            "Your responses show several frequent plastic-use behaviours.";
-
-        suggestion =
-            "Focus on small daily changes such as carrying a reusable bottle and bag.";
-
-    }
-
-
-    document.getElementById("resultIcon").textContent = icon;
-
-    document.getElementById("scoreNumber").textContent = score;
-
-    document.getElementById("scoreText").textContent =
-        isAfter
-            ? "Your After-Challenge Score"
-            : "Your Starting Score";
-
-    document.getElementById("categoryText").textContent =
-        category;
-
-    document.getElementById("explanationText").textContent =
-        explanation;
-
-    document.getElementById("suggestionText").textContent =
-        suggestion;
-
-
-    if (isAfter) {
-
-        localStorage.setItem("afterScore", score);
-
-        nextButton.textContent =
-            "View My Dashboard →";
-
-        nextButton.href =
-            "dashboard.html";
-
-    } else {
-
-        localStorage.setItem("beforeScore", score);
-        localStorage.setItem("plasticScore", score);
-
-        nextButton.textContent =
-            "Start 7-Day Challenge →";
-
-        nextButton.href =
-            "challenge.html";
-    }
-
-
-    result.classList.remove("hidden");
-
-    result.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-
-});
-
-</script>
 
 </body>
 </html>

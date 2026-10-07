@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>7-Day Challenge | PlasticTrack</title>
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="logo">♻️ PlasticTrack</div>
+
+    <a href="index.html" class="logo">
+        <span>♻️</span>
+        PlasticTrack
+    </a>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
@@ -18,212 +26,270 @@
         <a href="dashboard.html">Dashboard</a>
         <a class="active" href="challenge.html">Challenge</a>
     </div>
+
 </nav>
 
 
-<section class="challenge-header">
+<section class="page-header">
 
-    <div class="section-tag">7 DAYS • 7 ACTIONS</div>
+    <span class="section-label">
+        7 DAYS • 7 ACTIONS
+    </span>
 
     <h1>
         Reduce Plastic,<br>
-        One Day at a Time. 🌱
+        One Day at a Time.
     </h1>
 
     <p>
-        Complete simple actions that can become sustainable everyday habits.
+        Complete simple actions that can become
+        sustainable everyday habits.
     </p>
 
 </section>
 
 
-<section class="challenge-progress">
+<!-- PROGRESS -->
 
-    <div class="challenge-progress-top">
+<section class="challenge-progress-card">
+
+    <div class="progress-heading">
 
         <div>
-            <span class="section-tag">YOUR PROGRESS</span>
-            <h2 id="progressText">0 / 7 days completed</h2>
+
+            <span class="section-label">
+                YOUR PROGRESS
+            </span>
+
+            <h2 id="progressText">
+                0 / 7 days completed
+            </h2>
+
         </div>
 
-        <div class="progress-percent" id="progressPercent">
+        <strong id="progressPercent">
             0%
-        </div>
+        </strong>
 
     </div>
 
-    <div class="progress-bar">
+    <div class="progress-track">
         <div id="progressFill"></div>
     </div>
 
-    <p class="progress-hint">
-        Every completed day is one more step towards better habits.
+    <p>
+        Every completed day is one step towards better habits.
     </p>
 
 </section>
 
+
+<!-- CHALLENGE CARDS -->
 
 <section class="challenge-grid">
 
 
-    <div class="challenge-card" id="day1">
+    <article class="challenge-card"
+             data-day="1">
 
-        <div class="challenge-top">
-            <span class="day-number">DAY 01</span>
-            <span class="challenge-icon">💧</span>
+        <div class="challenge-card-top">
+            <span>DAY 01</span>
+            <strong>💧</strong>
         </div>
 
-        <h2>Use a Reusable Bottle</h2>
+        <h2>
+            Use a Reusable Bottle
+        </h2>
 
         <p>
-            Carry a reusable water bottle instead of buying a single-use
-            plastic bottle.
+            Carry a reusable water bottle instead of
+            buying a single-use plastic bottle.
         </p>
 
-        <button onclick="toggleDay(1)" id="button1">
+        <button class="challenge-button"
+                data-day="1">
             Complete Day 1
         </button>
 
-    </div>
+    </article>
 
 
-    <div class="challenge-card" id="day2">
+    <article class="challenge-card"
+             data-day="2">
 
-        <div class="challenge-top">
-            <span class="day-number">DAY 02</span>
-            <span class="challenge-icon">🛍️</span>
+        <div class="challenge-card-top">
+            <span>DAY 02</span>
+            <strong>🛍️</strong>
         </div>
 
-        <h2>Skip Plastic Bags</h2>
+        <h2>
+            Skip Plastic Bags
+        </h2>
 
         <p>
-            Carry a reusable bag when shopping instead of taking a
-            plastic carry bag.
+            Carry a reusable bag when shopping instead
+            of taking a plastic carry bag.
         </p>
 
-        <button onclick="toggleDay(2)" id="button2">
+        <button class="challenge-button"
+                data-day="2">
             Complete Day 2
         </button>
 
-    </div>
+    </article>
 
 
-    <div class="challenge-card" id="day3">
+    <article class="challenge-card"
+             data-day="3">
 
-        <div class="challenge-top">
-            <span class="day-number">DAY 03</span>
-            <span class="challenge-icon">🥤</span>
+        <div class="challenge-card-top">
+            <span>DAY 03</span>
+            <strong>🥤</strong>
         </div>
 
-        <h2>Avoid Disposable Cups</h2>
+        <h2>
+            Avoid Disposable Cups
+        </h2>
 
         <p>
-            Avoid disposable cups and choose a reusable alternative.
+            Avoid disposable cups and choose a reusable
+            alternative whenever possible.
         </p>
 
-        <button onclick="toggleDay(3)" id="button3">
+        <button class="challenge-button"
+                data-day="3">
             Complete Day 3
         </button>
 
-    </div>
+    </article>
 
 
-    <div class="challenge-card" id="day4">
+    <article class="challenge-card"
+             data-day="4">
 
-        <div class="challenge-top">
-            <span class="day-number">DAY 04</span>
-            <span class="challenge-icon">🍱</span>
+        <div class="challenge-card-top">
+            <span>DAY 04</span>
+            <strong>🍱</strong>
         </div>
 
-        <h2>Carry a Reusable Container</h2>
+        <h2>
+            Carry a Reusable Container
+        </h2>
 
         <p>
-            Use a reusable food container instead of disposable plastic
-            packaging.
+            Use a reusable food container instead of
+            disposable plastic packaging.
         </p>
 
-        <button onclick="toggleDay(4)" id="button4">
+        <button class="challenge-button"
+                data-day="4">
             Complete Day 4
         </button>
 
-    </div>
+    </article>
 
 
-    <div class="challenge-card" id="day5">
+    <article class="challenge-card"
+             data-day="5">
 
-        <div class="challenge-top">
-            <span class="day-number">DAY 05</span>
-            <span class="challenge-icon">🍎</span>
+        <div class="challenge-card-top">
+            <span>DAY 05</span>
+            <strong>🍎</strong>
         </div>
 
-        <h2>Reduce Plastic Packaging</h2>
+        <h2>
+            Reduce Plastic Packaging
+        </h2>
 
         <p>
-            Choose products with less plastic packaging whenever possible.
+            Choose products with less plastic packaging
+            whenever practical.
         </p>
 
-        <button onclick="toggleDay(5)" id="button5">
+        <button class="challenge-button"
+                data-day="5">
             Complete Day 5
         </button>
 
-    </div>
+    </article>
 
 
-    <div class="challenge-card" id="day6">
+    <article class="challenge-card"
+             data-day="6">
 
-        <div class="challenge-top">
-            <span class="day-number">DAY 06</span>
-            <span class="challenge-icon">🔄</span>
+        <div class="challenge-card-top">
+            <span>DAY 06</span>
+            <strong>🔄</strong>
         </div>
 
-        <h2>Reuse Something</h2>
+        <h2>
+            Reuse Something
+        </h2>
 
         <p>
-            Reuse a plastic item instead of throwing it away after one use.
+            Reuse a suitable plastic item instead of
+            throwing it away after one use.
         </p>
 
-        <button onclick="toggleDay(6)" id="button6">
+        <button class="challenge-button"
+                data-day="6">
             Complete Day 6
         </button>
 
-    </div>
+    </article>
 
 
-    <div class="challenge-card challenge-final" id="day7">
+    <article class="challenge-card challenge-final"
+             data-day="7">
 
-        <div class="challenge-top">
-            <span class="day-number">DAY 07</span>
-            <span class="challenge-icon">🌍</span>
+        <div class="challenge-card-top">
+            <span>DAY 07</span>
+            <strong>🌍</strong>
         </div>
 
-        <h2>Try a Plastic-Free Day</h2>
+        <h2>
+            Try a Plastic-Free Day
+        </h2>
 
         <p>
-            Try to avoid unnecessary single-use plastic for the entire day.
+            Try to avoid unnecessary single-use plastic
+            for the entire day.
         </p>
 
-        <button onclick="toggleDay(7)" id="button7">
+        <button class="challenge-button"
+                data-day="7">
             Complete Day 7
         </button>
 
-    </div>
+    </article>
 
 </section>
 
 
-<section class="challenge-complete" id="completionMessage">
+<!-- COMPLETION -->
 
-    <div class="completion-icon">🎉</div>
+<section class="completion-card"
+         id="completionMessage">
 
-    <span class="section-tag">CHALLENGE COMPLETE</span>
+    <div class="completion-icon">
+        🎉
+    </div>
 
-    <h2>You completed all 7 days!</h2>
+    <span class="section-label">
+        CHALLENGE COMPLETE
+    </span>
+
+    <h2>
+        You completed all 7 days!
+    </h2>
 
     <p>
-        Great work. Now measure whether your behaviour has changed.
+        Great work. Now measure whether your
+        behaviour has changed.
     </p>
 
-    <a href="survey.html?stage=after" class="primary-btn">
+    <a href="survey.html?stage=after"
+       class="btn btn-primary">
         Take After Survey →
     </a>
 
@@ -231,109 +297,17 @@
 
 
 <footer>
-    <strong>♻️ PlasticTrack</strong>
-    <p>Track. Reduce. Reuse.</p>
+
+    <div>
+        <strong>♻️ PlasticTrack</strong>
+        <span>Track. Reduce. Reuse.</span>
+    </div>
+
+    <p>
+        VTU Community Project • Sustainable Living
+    </p>
+
 </footer>
-
-
-<script>
-
-let completedDays =
-    JSON.parse(localStorage.getItem("challengeDays")) || [];
-
-
-completedDays = [...new Set(completedDays)]
-    .map(Number)
-    .sort((a, b) => a - b);
-
-
-function toggleDay(day) {
-
-    if (completedDays.includes(day)) {
-
-        completedDays =
-            completedDays.filter(d => d !== day);
-
-    } else {
-
-        completedDays.push(day);
-
-    }
-
-    completedDays.sort((a, b) => a - b);
-
-    localStorage.setItem(
-        "challengeDays",
-        JSON.stringify(completedDays)
-    );
-
-    updateChallenge();
-}
-
-
-function updateChallenge() {
-
-    for (let day = 1; day <= 7; day++) {
-
-        const card =
-            document.getElementById("day" + day);
-
-        const button =
-            document.getElementById("button" + day);
-
-
-        if (completedDays.includes(day)) {
-
-            card.classList.add("completed");
-
-            button.textContent =
-                "✓ Completed — Click to Undo";
-
-        } else {
-
-            card.classList.remove("completed");
-
-            button.textContent =
-                "Complete Day " + day;
-        }
-    }
-
-
-    const count =
-        completedDays.length;
-
-    const percentage =
-        Math.round((count / 7) * 100);
-
-
-    document.getElementById("progressText").textContent =
-        count + " / 7 days completed";
-
-    document.getElementById("progressPercent").textContent =
-        percentage + "%";
-
-    document.getElementById("progressFill").style.width =
-        percentage + "%";
-
-
-    const completionMessage =
-        document.getElementById("completionMessage");
-
-
-    if (count === 7) {
-
-        completionMessage.style.display = "block";
-
-    } else {
-
-        completionMessage.style.display = "none";
-    }
-}
-
-
-updateChallenge();
-
-</script>
 
 </body>
 </html>
