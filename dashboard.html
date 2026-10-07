@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | PlasticTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🌱 PlasticTrack
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="survey.html">Survey</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="challenge.html">Challenge</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Dashboard -->
+    <main class="dashboard-container">
+
+        <!-- Header -->
+        <section class="dashboard-header">
+
+            <p class="eyebrow">YOUR PLASTIC IMPACT</p>
+
+            <h1>PlasticTrack Dashboard</h1>
+
+            <p>
+                Track your progress and see how your plastic-use habits are changing.
+            </p>
+
+        </section>
+
+
+        <!-- Score Cards -->
+        <section class="dashboard-grid">
+
+            <!-- Before -->
+            <div class="dashboard-card">
+
+                <div class="card-icon">📊</div>
+
+                <h3>Before Challenge</h3>
+
+                <div class="dashboard-number" id="beforeScore">
+                    --
+                </div>
+
+                <p>Your baseline plastic usage score</p>
+
+            </div>
+
+
+            <!-- After -->
+            <div class="dashboard-card">
+
+                <div class="card-icon">🌱</div>
+
+                <h3>After Challenge</h3>
+
+                <div class="dashboard-number" id="afterScore">
+                    --
+                </div>
+
+                <p>Your latest plastic usage score</p>
+
+            </div>
+
+
+            <!-- Reduction -->
+            <div class="dashboard-card highlight-card">
+
+                <div class="card-icon">📉</div>
+
+                <h3>Reduction</h3>
+
+                <div class="dashboard-number" id="reduction">
+                    --
+                </div>
+
+                <p>Plastic usage score reduction</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Progress Section -->
+        <section class="progress-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">CHALLENGE PROGRESS</p>
+
+                    <h2>7-Day Plastic Reduction Challenge</h2>
+                </div>
+
+                <div class="challenge-count" id="challengeCount">
+                    0 / 7
+                </div>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div
+                    class="progress-bar"
+                    id="challengeProgress">
+                </div>
+
+            </div>
+
+
+            <p id="challengeMessage">
+                Start your challenge and build better plastic-free habits.
+            </p>
+
+            <a href="challenge.html" class="primary-btn">
+                View Challenge →
+            </a>
+
+        </section>
+
+
+        <!-- Before vs After -->
+        <section class="comparison-section">
+
+            <p class="eyebrow">YOUR IMPROVEMENT</p>
+
+            <h2>Before vs After</h2>
+
+            <p>
+                See how your plastic usage score changed after the challenge.
+            </p>
+
+
+            <div class="comparison-box">
+
+                <div class="comparison-item">
+
+                    <span>Before</span>
+
+                    <div
+                        class="comparison-bar before-bar"
+                        id="beforeBar">
+                    </div>
+
+                    <strong id="beforeValue">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="comparison-item">
+
+                    <span>After</span>
+
+                    <div
+                        class="comparison-bar after-bar"
+                        id="afterBar">
+                    </div>
+
+                    <strong id="afterValue">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tips -->
+        <section class="tips-section">
+
+            <p class="eyebrow">SMALL CHANGES</p>
+
+            <h2>Ways to Reduce Plastic</h2>
+
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+                    <span>💧</span>
+                    <h3>Carry a reusable bottle</h3>
+                    <p>
+                        Avoid buying single-use plastic water bottles.
+                    </p>
+                </div>
+
+
+                <div class="tip-card">
+                    <span>🛍️</span>
+                    <h3>Use reusable bags</h3>
+                    <p>
+                        Carry a cloth or reusable bag when shopping.
+                    </p>
+                </div>
+
+
+                <div class="tip-card">
+                    <span>🥤</span>
+                    <h3>Avoid disposable items</h3>
+                    <p>
+                        Choose reusable cups, plates and containers.
+                    </p>
+                </div>
+
+
+                <div class="tip-card">
+                    <span>♻️</span>
+                    <h3>Reuse whenever possible</h3>
+                    <p>
+                        Give plastic items another useful purpose before disposal.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Community Impact -->
+        <section class="community-section">
+
+            <p class="eyebrow">COMMUNITY IMPACT</p>
+
+            <h2>PlasticTrack Impact</h2>
+
+            <p>
+                Community-level results will be added after collecting
+                participant data during the project.
+            </p>
+
+
+            <div class="impact-grid">
+
+                <div class="impact-card">
+
+                    <span>👥</span>
+
+                    <h3 id="participants">
+                        0
+                    </h3>
+
+                    <p>Participants</p>
+
+                </div>
+
+
+                <div class="impact-card">
+
+                    <span>📉</span>
+
+                    <h3 id="communityReduction">
+                        0%
+                    </h3>
+
+                    <p>Average Reduction</p>
+
+                </div>
+
+
+                <div class="impact-card">
+
+                    <span>🌱</span>
+
+                    <h3>
+                        7
+                    </h3>
+
+                    <p>Challenge Days</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 PlasticTrack | Track. Reduce. Reuse.
+        </p>
+
+    </footer>
+
+
+    <!-- Dashboard JavaScript -->
+    <script>
+
+        /* --------------------------------
+           GET SAVED SCORES
+        -------------------------------- */
+
+        const beforeScore =
+            localStorage.getItem("beforeScore");
+
+        const afterScore =
+            localStorage.getItem("afterScore");
+
+
+        /* --------------------------------
+           DISPLAY BEFORE SCORE
+        -------------------------------- */
+
+        if (beforeScore !== null) {
+
+            document.getElementById("beforeScore").textContent =
+                beforeScore + " / 15";
+
+            document.getElementById("beforeValue").textContent =
+                beforeScore + " / 15";
+
+            const beforeWidth =
+                (Number(beforeScore) / 15) * 100;
+
+            document.getElementById("beforeBar").style.width =
+                beforeWidth + "%";
+
+        }
+
+
+        /* --------------------------------
+           DISPLAY AFTER SCORE
+        -------------------------------- */
+
+        if (afterScore !== null) {
+
+            document.getElementById("afterScore").textContent =
+                afterScore + " / 15";
+
+            document.getElementById("afterValue").textContent =
+                afterScore + " / 15";
+
+            const afterWidth =
+                (Number(afterScore) / 15) * 100;
+
+            document.getElementById("afterBar").style.width =
+                afterWidth + "%";
+
+        }
+
+
+        /* --------------------------------
+           CALCULATE REDUCTION
+        -------------------------------- */
+
+        if (
+            beforeScore !== null &&
+            afterScore !== null
+        ) {
+
+            const before =
+                Number(beforeScore);
+
+            const after =
+                Number(afterScore);
+
+
+            let reduction = 0;
+
+
+            if (before > 0) {
+
+                reduction =
+                    ((before - after) / before) * 100;
+
+            }
+
+
+            reduction =
+                Math.round(reduction);
+
+
+            document.getElementById("reduction").textContent =
+                reduction + "%";
+
+
+            document.getElementById("communityReduction").textContent =
+                reduction + "%";
+
+
+            if (reduction > 0) {
+
+                document.getElementById("challengeMessage").textContent =
+                    "Great work! Your plastic usage score has improved by " +
+                    reduction + "%.";
+
+            }
+
+            else if (reduction === 0) {
+
+                document.getElementById("challengeMessage").textContent =
+                    "Your score has not changed yet. Keep working on your plastic-free habits.";
+
+            }
+
+            else {
+
+                document.getElementById("challengeMessage").textContent =
+                    "Your score increased. Don't worry — keep practicing the challenge.";
+
+            }
+
+        }
+
+
+        /* --------------------------------
+           CHALLENGE PROGRESS
+        -------------------------------- */
+
+        const completedDays =
+            Number(localStorage.getItem("completedDays")) || 0;
+
+
+        document.getElementById("challengeCount").textContent =
+            completedDays + " / 7";
+
+
+        const progress =
+            (completedDays / 7) * 100;
+
+
+        document.getElementById("challengeProgress").style.width =
+            progress + "%";
+
+
+        if (completedDays === 7) {
+
+            document.getElementById("challengeMessage").textContent =
+                "🎉 You completed the 7-day Plastic Reduction Challenge!";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
